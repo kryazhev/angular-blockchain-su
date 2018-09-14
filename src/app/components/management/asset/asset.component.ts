@@ -38,16 +38,7 @@ export class AssetComponent implements OnInit {
       result => {
         this.errorMessage = null;
         this.allAssets = result;
-      },
-      error => {
-        if (error === 'Server error') {
-          this.errorMessage = 'Could not connect to REST server. Please check your configuration details';
-        } else if (error === '404 - Not Found') {
-          this.errorMessage = '404 - Could not find API route. Please check your available APIs.';
-        } else {
-          this.errorMessage = error;
-        }
-      });
+      }, this.errorHandler);
   }
 
   changeArrayValue(name: string, value: any): void {
@@ -86,14 +77,7 @@ export class AssetComponent implements OnInit {
           'value': null
         });
         this.loadAll();
-      },
-      error => {
-        if (error === 'Server error') {
-          this.errorMessage = 'Could not connect to REST server. Please check your configuration details';
-        } else {
-          this.errorMessage = error;
-        }
-      });
+      }, this.errorHandler);
   }
 
   updateAsset(form: any): void {
@@ -107,16 +91,7 @@ export class AssetComponent implements OnInit {
       () => {
         this.errorMessage = null;
         this.loadAll();
-      },
-      error => {
-        if (error === 'Server error') {
-          this.errorMessage = 'Could not connect to REST server. Please check your configuration details';
-        } else if (error === '404 - Not Found') {
-          this.errorMessage = '404 - Could not find API route. Please check your available APIs.';
-        } else {
-          this.errorMessage = error;
-        }
-      });
+      }, this.errorHandler);
   }
 
 
@@ -125,16 +100,7 @@ export class AssetComponent implements OnInit {
       () => {
         this.errorMessage = null;
         this.loadAll();
-      },
-      error => {
-        if (error === 'Server error') {
-          this.errorMessage = 'Could not connect to REST server. Please check your configuration details';
-        } else if (error === '404 - Not Found') {
-          this.errorMessage = '404 - Could not find API route. Please check your available APIs.';
-        } else {
-          this.errorMessage = error;
-        }
-      });
+      }, this.errorHandler);
   }
 
   setId(id: any): void {
@@ -170,17 +136,7 @@ export class AssetComponent implements OnInit {
         }
 
         this.myForm.setValue(formObject);
-
-      },
-      error => {
-        if (error === 'Server error') {
-          this.errorMessage = 'Could not connect to REST server. Please check your configuration details';
-        } else if (error === '404 - Not Found') {
-          this.errorMessage = '404 - Could not find API route. Please check your available APIs.';
-        } else {
-          this.errorMessage = error;
-        }
-      });
+      }, this.errorHandler);
   }
 
   resetForm(): void {
@@ -189,6 +145,16 @@ export class AssetComponent implements OnInit {
       'owner': null,
       'value': null
     });
+  }
+
+  errorHandler(error?: any) {
+    if (error === 'Server error') {
+      this.errorMessage = 'Could not connect to REST server. Please check your configuration details';
+    } else if (error === '404 - Not Found') {
+      this.errorMessage = '404 - Could not find API route. Please check your available APIs.';
+    } else {
+      this.errorMessage = error;
+    }
   }
 
 }

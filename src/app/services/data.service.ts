@@ -12,23 +12,23 @@ export class DataService {
   constructor(private restangular: Restangular) { }
 
   public getAll(): Observable<SampleAsset[]> {
-    return this.restangular.all('Asset');
+    return this.restangular.all('SampleAsset').getList();
   }
 
   public getAsset(id: any): Observable<SampleAsset> {
-    return this.restangular.one('Asset/' + id);
+    return this.restangular.one('SampleAsset/' + id).get();
   }
 
   public addAsset(itemToAdd: any): Observable<SampleAsset> {
-    return this.restangular.all('Asset').save(itemToAdd);
+    return this.restangular.all('SampleAsset').save(itemToAdd);
   }
 
   public updateAsset(id: any, itemToUpdate: any): Observable<SampleAsset> {
-    return this.restangular.all('Asset').save(itemToUpdate);
+    return this.restangular.all('SampleAsset').save(itemToUpdate);
   }
 
   public deleteAsset(id: any): Observable<SampleAsset> {
-    return this.restangular.all('Asset').delete(id);
+    return this.restangular.all('SampleAsset').delete(id);
   }
 }
 

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 import { DataService } from '../../../services/data.service';
-import { Asset } from '../../../services/su.blockchain';
 
 @Component({
   selector: 'app-asset',
@@ -34,18 +33,13 @@ export class AssetComponent implements OnInit {
     this.loadAll();
   }
 
-  loadAll(): Promise<any> {
-    const tempList = [];
-    return this.dataService.getAll()
-      .toPromise()
-      .then((result) => {
+  loadAll(): void {
+    this.dataService.getAll().subscribe(
+      result => {
         this.errorMessage = null;
-        result.forEach(asset => {
-          tempList.push(asset);
-        });
-        this.allAssets = tempList;
-      })
-      .catch((error) => {
+        this.allAssets = result;
+      },
+      error => {
         if (error === 'Server error') {
           this.errorMessage = 'Could not connect to REST server. Please check your configuration details';
         } else if (error === '404 - Not Found') {
@@ -69,7 +63,7 @@ export class AssetComponent implements OnInit {
     return this[name].value.indexOf(value) !== -1;
   }
 
-  addAsset(form: any): Promise<any> {
+  addAsset(form: any): void {
     this.asset = {
       $class: 'su.blockchain.SampleAsset',
       'assetId': this.assetId.value,
@@ -83,9 +77,8 @@ export class AssetComponent implements OnInit {
       'value': null
     });
 
-    return this.dataService.addAsset(this.asset)
-      .toPromise()
-      .then(() => {
+    this.dataService.addAsset(this.asset).subscribe(
+      () => {
         this.errorMessage = null;
         this.myForm.setValue({
           'assetId': null,
@@ -93,8 +86,8 @@ export class AssetComponent implements OnInit {
           'value': null
         });
         this.loadAll();
-      })
-      .catch((error) => {
+      },
+      error => {
         if (error === 'Server error') {
           this.errorMessage = 'Could not connect to REST server. Please check your configuration details';
         } else {
@@ -103,20 +96,19 @@ export class AssetComponent implements OnInit {
       });
   }
 
-  updateAsset(form: any): Promise<any> {
+  updateAsset(form: any): void {
     this.asset = {
       $class: 'su.blockchain.SampleAsset',
       'owner': this.owner.value,
       'value': this.value.value
     };
 
-    return this.dataService.updateAsset(form.get('assetId').value, this.asset)
-      .toPromise()
-      .then(() => {
+    this.dataService.updateAsset(form.get('assetId').value, this.asset).subscribe(
+      () => {
         this.errorMessage = null;
         this.loadAll();
-      })
-      .catch((error) => {
+      },
+      error => {
         if (error === 'Server error') {
           this.errorMessage = 'Could not connect to REST server. Please check your configuration details';
         } else if (error === '404 - Not Found') {
@@ -128,14 +120,13 @@ export class AssetComponent implements OnInit {
   }
 
 
-  deleteAsset(): Promise<any> {
-    return this.dataService.deleteAsset(this.currentId)
-      .toPromise()
-      .then(() => {
+  deleteAsset(): void {
+    this.dataService.deleteAsset(this.currentId).subscribe(
+      () => {
         this.errorMessage = null;
         this.loadAll();
-      })
-      .catch((error) => {
+      },
+      error => {
         if (error === 'Server error') {
           this.errorMessage = 'Could not connect to REST server. Please check your configuration details';
         } else if (error === '404 - Not Found') {
@@ -150,10 +141,9 @@ export class AssetComponent implements OnInit {
     this.currentId = id;
   }
 
-  getForm(id: any): Promise<any> {
-    return this.dataService.getAsset(id)
-      .toPromise()
-      .then((result) => {
+  getForm(id: any): void {
+    this.dataService.getAsset(id).subscribe(
+      result => {
         this.errorMessage = null;
         const formObject = {
           'assetId': null,
@@ -181,8 +171,8 @@ export class AssetComponent implements OnInit {
 
         this.myForm.setValue(formObject);
 
-      })
-      .catch((error) => {
+      },
+      error => {
         if (error === 'Server error') {
           this.errorMessage = 'Could not connect to REST server. Please check your configuration details';
         } else if (error === '404 - Not Found') {

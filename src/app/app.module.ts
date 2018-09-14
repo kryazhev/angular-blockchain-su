@@ -7,6 +7,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { RestangularModule } from 'ngx-restangular';
 import { RestangularConfigFactory, DataService } from 'src/app/services/data.service';
 
@@ -19,7 +21,9 @@ import { AssetComponent } from './components/management/asset/asset.component';
   declarations: [
 
     AppComponent,
+
     HeaderComponent,
+
     AssetComponent
   ],
   imports: [
@@ -28,6 +32,9 @@ import { AssetComponent } from './components/management/asset/asset.component';
     MatToolbarModule,
     MatButtonModule,
     MatInputModule,
+
+    ReactiveFormsModule,
+    FormsModule,
 
     AppRoutingModule,
     RestangularModule.forRoot(RestangularConfigFactory),

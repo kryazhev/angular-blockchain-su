@@ -1,16 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing/app-routing.module';
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+
+import { RestangularModule } from 'ngx-restangular';
+import { RestangularConfigFactory, DataService } from 'src/app/services/data.service';
+
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+
+import { AssetComponent } from './components/management/asset/asset.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+
+    AppComponent,
+    HeaderComponent,
+    AssetComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+
+    MatToolbarModule,
+    MatButtonModule,
+    MatInputModule,
+
+    AppRoutingModule,
+    RestangularModule.forRoot(RestangularConfigFactory),
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -19,12 +19,8 @@ export class DataService {
     return this.restangular.one('SampleAsset/' + id).get();
   }
 
-  public addAsset(itemToAdd: any): Observable<SampleAsset> {
+  public save(itemToAdd: any): Observable<SampleAsset> {
     return this.restangular.all('SampleAsset').save(itemToAdd);
-  }
-
-  public updateAsset(id: any, itemToUpdate: any): Observable<SampleAsset> {
-    return this.restangular.all('SampleAsset').save(itemToUpdate);
   }
 
   public deleteAsset(id: any): Observable<SampleAsset> {

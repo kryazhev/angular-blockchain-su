@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 import { DataService } from '../../../services/data.service';
+import { SampleAsset } from '../../../services/su.blockchain';
 
 @Component({
   selector: 'app-asset',
@@ -12,24 +13,20 @@ export class AssetComponent implements OnInit {
 
   myForm: FormGroup;
 
-  private allAssets;
   private asset;
-  private currentId;
-  private errorMessage;
+  allAssets: SampleAsset[];
+  currentId: number;
+  errorMessage: string;
 
-  assetId = new FormControl('', Validators.required);
-  owner = new FormControl('', Validators.required);
-  value = new FormControl('', Validators.required);
-
-  constructor(public dataService: DataService, fb: FormBuilder) {
-    this.myForm = fb.group({
-      assetId: this.assetId,
-      owner: this.owner,
-      value: this.value
-    });
-  }
+  constructor(private dataService: DataService, private builder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.myForm = this.builder.group({
+      assetId: ['', [Validators.required]],
+      owner: ['', [Validators.required]],
+      value: ['', [Validators.required]],
+    });
+
     this.loadAll();
   }
 
@@ -54,46 +51,17 @@ export class AssetComponent implements OnInit {
     return this[name].value.indexOf(value) !== -1;
   }
 
-  addAsset(form: any): void {
-    this.asset = {
-      $class: 'su.blockchain.SampleAsset',
-      'assetId': this.assetId.value,
-      'owner': this.owner.value,
-      'value': this.value.value
-    };
+  saveAsset(): void {
+    this.asset = this.myForm.value;
+    this.asset.$class = 'su.blockchain.SampleAsset',
 
-    this.myForm.setValue({
-      'assetId': null,
-      'owner': null,
-      'value': null
-    });
-
-    this.dataService.addAsset(this.asset).subscribe(
+    this.dataService.save(this.asset).subscribe(
       () => {
         this.errorMessage = null;
-        this.myForm.setValue({
-          'assetId': null,
-          'owner': null,
-          'value': null
-        });
+        this.resetForm();
         this.loadAll();
       }, this.errorHandler);
   }
-
-  updateAsset(form: any): void {
-    this.asset = {
-      $class: 'su.blockchain.SampleAsset',
-      'owner': this.owner.value,
-      'value': this.value.value
-    };
-
-    this.dataService.updateAsset(form.get('assetId').value, this.asset).subscribe(
-      () => {
-        this.errorMessage = null;
-        this.loadAll();
-      }, this.errorHandler);
-  }
-
 
   deleteAsset(): void {
     this.dataService.deleteAsset(this.currentId).subscribe(

@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 
 import { AssetComponent } from './components/management/asset/asset.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,10 @@ import { AssetComponent } from './components/management/asset/asset.component';
 
     HeaderComponent,
 
-    AssetComponent
+    HomeComponent,
+
+    AssetComponent,
+
   ],
   imports: [
     BrowserModule,

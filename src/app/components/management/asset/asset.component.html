@@ -2,9 +2,8 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="addAssetModalLabel">Create asset</h4>
-        <p class="modal-intro">Enter the required values below.</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form [formGroup]="myForm" novalidate>
         <div class="modal-body">
@@ -21,6 +20,7 @@
             <input formControlName="value" type="text" class="form-control">
           </div>
         </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           <button (click)="saveAsset()" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
@@ -30,13 +30,12 @@
   </div>
 </div>
 
-
 <div class="modal fade" id="updateAssetModal" tabindex="-1" role="dialog" aria-labelledby="updateAssetModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="updateAssetModalLabel">Update Asset</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form [formGroup]="myForm" novalidate>
         <div class="modal-body">
@@ -53,6 +52,7 @@
             <input formControlName="value" type="text" class="form-control">
           </div>
         </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           <button (click)="saveAsset()" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
@@ -67,8 +67,8 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="deleteAssetModalLabel">Delete Asset</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">

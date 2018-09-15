@@ -11,20 +11,29 @@ export class DataService {
 
   constructor(private restangular: Restangular) { }
 
-  public getAll(): Observable<SampleAsset[]> {
+  list(): Observable<SampleAsset[]> {
+    console.log('list ');
     return this.restangular.all('SampleAsset').getList();
   }
 
-  public getAsset(id: any): Observable<SampleAsset> {
-    return this.restangular.one('SampleAsset/' + id).get();
+  one(id: any): Observable<SampleAsset> {
+    console.log('One ' + id);
+    return this.restangular.one('SampleAsset', id).get();
   }
 
-  public save(itemToAdd: any): Observable<SampleAsset> {
-    return this.restangular.all('SampleAsset').save(itemToAdd);
+  create(item: any): Observable<SampleAsset> {
+    console.log('Create ' + JSON.stringify(item));
+    return this.restangular.all('SampleAsset').post(item);
   }
 
-  public deleteAsset(id: any): Observable<SampleAsset> {
-    return this.restangular.all('SampleAsset').delete(id);
+  update(item: any): Observable<SampleAsset> {
+    console.log('Update ' + JSON.stringify(item));
+    return this.restangular.all('SampleAsset').post(item);
+  }
+
+  delete(id: any): Observable<SampleAsset> {
+    console.log('Delete ' + id);
+    return this.restangular.one('SampleAsset', id).remove();
   }
 }
 

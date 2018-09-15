@@ -31,40 +31,36 @@ export class AssetComponent implements OnInit {
   }
 
   loadAll(): void {
-    this.dataService.getAll().subscribe(
+    this.dataService.list().subscribe(
       result => {
         this.errorMessage = null;
         this.allAssets = result;
       }, this.errorHandler);
   }
 
-  changeArrayValue(name: string, value: any): void {
-    const index = this[name].value.indexOf(value);
-    if (index === -1) {
-      this[name].value.push(value);
+  saveAsset(): void {
+    this.asset = this.myForm.value;
+    this.asset.$class = 'su.blockchain.SampleAsset';
+
+    if (!this.asset.id) {
+      this.dataService.create(this.asset).subscribe(
+        () => {
+          this.errorMessage = null;
+          this.resetForm();
+          this.loadAll();
+        }, this.errorHandler);
     } else {
-      this[name].value.splice(index, 1);
+      this.dataService.update(this.asset).subscribe(
+        () => {
+          this.errorMessage = null;
+          this.resetForm();
+          this.loadAll();
+        }, this.errorHandler);
     }
   }
 
-  hasArrayValue(name: string, value: any): boolean {
-    return this[name].value.indexOf(value) !== -1;
-  }
-
-  saveAsset(): void {
-    this.asset = this.myForm.value;
-    this.asset.$class = 'su.blockchain.SampleAsset',
-
-    this.dataService.save(this.asset).subscribe(
-      () => {
-        this.errorMessage = null;
-        this.resetForm();
-        this.loadAll();
-      }, this.errorHandler);
-  }
-
   deleteAsset(): void {
-    this.dataService.deleteAsset(this.currentId).subscribe(
+    this.dataService.delete(this.currentId).subscribe(
       () => {
         this.errorMessage = null;
         this.loadAll();
@@ -75,35 +71,15 @@ export class AssetComponent implements OnInit {
     this.currentId = id;
   }
 
-  getForm(id: any): void {
-    this.dataService.getAsset(id).subscribe(
+  editForm(id: any): void {
+    this.dataService.one(id).subscribe(
       result => {
         this.errorMessage = null;
-        const formObject = {
-          'assetId': null,
-          'owner': null,
-          'value': null
-        };
-
-        if (result.assetId) {
-          formObject.assetId = result.assetId;
-        } else {
-          formObject.assetId = null;
-        }
-
-        if (result.owner) {
-          formObject.owner = result.owner;
-        } else {
-          formObject.owner = null;
-        }
-
-        if (result.value) {
-          formObject.value = result.value;
-        } else {
-          formObject.value = null;
-        }
-
-        this.myForm.setValue(formObject);
+        this.myForm.setValue({
+          assetId: result.assetId,
+          owner: result.owner,
+          value: result.value
+        });
       }, this.errorHandler);
   }
 

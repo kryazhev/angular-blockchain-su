@@ -21,7 +21,7 @@
         </div>
 
         <div class="modal-footer">
-          <button (click)="save()" type="submit" class="btn btn-success" [disabled]="form.invalid" [class.disabled]="form.invalid"
+          <button (click)="save()" type="submit" class="btn btn-primary" [disabled]="form.invalid" [class.disabled]="form.invalid"
             data-dismiss="modal">Save</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
@@ -67,20 +67,20 @@
   <br>
   <div class="row" *ngIf="items">
     <div class="col-md-12">
-      <table class="table table-responsive">
-        <thead class="thead">
-          <tr class="thead-cols">
-            <th class="info">assetId</th>
-            <th class="info">owner</th>
-            <th class="info">value</th>
-            <th class="info-actions">Actions</th>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th scope="col">AssetId</th>
+            <th scope="col">Owner</th>
+            <th scope="col">Value</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let asset of items">
-            <td class="asset-properties">{{asset.assetId}}</td>
-            <td class="asset-properties">{{asset.owner}}</td>
-            <td class="asset-properties">{{asset.value}}</td>
+            <td>{{asset.assetId}}</td>
+            <td>{{asset.owner}}</td>
+            <td>{{asset.value}}</td>
             <td>
               <div class="btn-group" role="group" aria-label="Actions">
                 <button (click)="editForm(asset.assetId);" type="button" data-toggle="modal" data-target="#editModal">

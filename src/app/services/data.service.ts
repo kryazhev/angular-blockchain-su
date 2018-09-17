@@ -13,7 +13,7 @@ export class DataService<Type> {
 
   list(): Observable<Type[]> {
     console.log('list ');
-    return this.restangular.all(this.typeName + '').getList();
+    return this.restangular.all(this.typeName).getList();
   }
 
   one(id: any): Observable<Type> {

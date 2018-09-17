@@ -6,11 +6,8 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form [formGroup]="myForm" novalidate>
+        <input formControlName="assetId" type="hidden">
         <div class="modal-body">
-          <div class="form-group text-left">
-            <label for="assetId">assetId</label>
-            <input formControlName="assetId" class="form-control">
-          </div>
           <div class="form-group text-left">
             <label for="owner">owner</label>
             <input formControlName="owner" class="form-control">

@@ -22,7 +22,7 @@ export class AssetComponent implements OnInit {
 
   ngOnInit(): void {
     this.myForm = this.builder.group({
-      assetId: ['', [Validators.required]],
+      assetId: ['', []],
       owner: ['', [Validators.required]],
       value: ['', [Validators.required]],
     });
@@ -42,7 +42,7 @@ export class AssetComponent implements OnInit {
     this.asset = this.myForm.value;
     this.asset.$class = 'su.blockchain.SampleAsset';
 
-    if (!this.asset.id) {
+    if (!this.asset.assetId) {
       this.dataService.create(this.asset).subscribe(
         () => {
           this.errorMessage = null;
@@ -85,9 +85,9 @@ export class AssetComponent implements OnInit {
 
   resetForm(): void {
     this.myForm.setValue({
-      'assetId': null,
-      'owner': null,
-      'value': null
+      assetId: null,
+      owner: null,
+      value: null
     });
   }
 

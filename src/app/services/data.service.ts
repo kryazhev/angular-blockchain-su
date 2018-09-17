@@ -3,6 +3,7 @@ import { Restangular } from 'ngx-restangular';
 import { Observable } from 'rxjs';
 
 import { SampleAsset } from './su.blockchain';
+import { v4 as uuid } from 'uuid';
 
 @Injectable({
   providedIn: 'root'
@@ -22,13 +23,16 @@ export class DataService {
   }
 
   create(item: any): Observable<SampleAsset> {
+    item.assetId = uuid();
     console.log('Create ' + JSON.stringify(item));
     return this.restangular.all('SampleAsset').post(item);
   }
 
   update(item: any): Observable<SampleAsset> {
+    const id = item.assetId;
+    item.assetId = undefined;
     console.log('Update ' + JSON.stringify(item));
-    return this.restangular.all('SampleAsset').post(item);
+    return this.restangular.one('SampleAsset/' + id).customPUT(item);
   }
 
   delete(id: any): Observable<SampleAsset> {
@@ -37,6 +41,16 @@ export class DataService {
   }
 }
 
-export function RestangularConfigFactory (RestangularProvider) {
+export function RestangularConfigFactory(RestangularProvider) {
   RestangularProvider.setBaseUrl('http://localhost:3000/api/');
+}
+
+function replacer(key, value) {
+  if (key === 'id') {
+    return undefined;
+  } else if (key === 'assetId') {
+    return undefined;
+  } else {
+    return value;
+  }
 }

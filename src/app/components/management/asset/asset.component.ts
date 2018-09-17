@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 
 import { DataService } from '../../../services/data.service';
@@ -14,9 +14,9 @@ import { BaseComponent } from '../../base.component';
 export class AssetComponent extends BaseComponent<SampleAsset> {
 
   formErrors = {
-    assetId: '',
-    owner: '',
-    value: ''
+    assetId: null,
+    owner: null,
+    value: null
   };
 
   validationMessages = {
@@ -70,9 +70,9 @@ export class AssetComponent extends BaseComponent<SampleAsset> {
     });
 
     this.formErrors = {
-      assetId: '',
-      owner: '',
-      value: ''
+      assetId: null,
+      owner: null,
+      value: null
     };
   }
 

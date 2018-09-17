@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppComponent } from '../app.component';
-import { AssetComponent } from '../components/management/asset/asset.component';
 import { HomeComponent } from '../components/home/home.component';
+
+import { ParticipantComponent } from '../components/management/participant/participant.component';
+import { AssetComponent } from '../components/management/asset/asset.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -13,7 +14,7 @@ const routes: Routes = [
   { path: 'about-us', component: HomeComponent},
   { path: 'contact-us', component: HomeComponent},
 
-  { path: 'projects/management/participants', component: HomeComponent},
+  { path: 'projects/management/participants', component: ParticipantComponent},
   { path: 'projects/management/assets', component: AssetComponent},
   { path: 'projects/management/transactions', component: HomeComponent},
 ];

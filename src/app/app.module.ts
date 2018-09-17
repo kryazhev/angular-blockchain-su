@@ -15,8 +15,10 @@ import { RestangularConfigFactory, DataService } from 'src/app/services/data.ser
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 
-import { AssetComponent } from './components/management/asset/asset.component';
 import { HomeComponent } from './components/home/home.component';
+
+import { ParticipantComponent } from './components/management/participant/participant.component';
+import { AssetComponent } from './components/management/asset/asset.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { HomeComponent } from './components/home/home.component';
 
     HomeComponent,
 
+    ParticipantComponent,
     AssetComponent,
 
   ],

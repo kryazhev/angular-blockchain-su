@@ -2,25 +2,26 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="editModalLabel">Edit Asset</h4>
+        <h4 class="modal-title" id="editModalLabel">Edit Participant</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form [formGroup]="form" novalidate class="needs-validation">
-        <input formControlName="assetId" type="hidden">
+        <input formControlName="participantId" type="hidden">
         <div class="modal-body">
           <div class="form-group text-left">
-            <label for="owner">Owner</label>
-            <input formControlName="owner" class="form-control" [class.is-invalid]="formErrors.owner">
-            <div class="invalid-feedback" *ngIf="formErrors.owner">{{formErrors.owner}}</div>
+            <label for="firstName">First Name</label>
+            <input formControlName="firstName" class="form-control" [class.is-invalid]="formErrors.firstName">
+            <div class="invalid-feedback" *ngIf="formErrors.firstName">{{formErrors.firstName}}</div>
           </div>
           <div class="form-group text-left">
-            <label for="value">Value</label>
-            <input formControlName="value" type="text" class="form-control" [class.is-invalid]="formErrors.value">
-            <div class="invalid-feedback" *ngIf="formErrors.value">{{formErrors.value}}</div>
+            <label for="lastName">Last Name</label>
+            <input formControlName="lastName" type="text" class="form-control" [class.is-invalid]="formErrors.lastName">
+            <div class="invalid-feedback" *ngIf="formErrors.lastName">{{formErrors.lastName}}</div>
           </div>
         </div>
 
         <div class="modal-footer">
+          <div>{{formErrors.firstName}} {{formErrors.lastName}}</div>
           <button (click)="save()" type="submit" class="btn btn-primary" [disabled]="form.invalid" [class.disabled]="form.invalid"
             data-dismiss="modal">Save</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -34,12 +35,12 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="deleteModalLabel">Delete Asset</h4>
+        <h4 class="modal-title" id="deleteModalLabel">Delete Participant</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form [formGroup]="form">
         <div class="modal-body">
-          Are you sure you want to delete this asset?
+          Are you sure you want to delete this participant?
         </div>
         <div class="modal-footer">
           <button (click)="delete()" type="submit" class="btn btn-danger" data-dismiss="modal">Yes</button>
@@ -56,11 +57,11 @@
   </div>
   <div class="row">
     <div class="col-md-9">
-      <h2>SampleAsset</h2>
+      <h2>SampleParticipant</h2>
     </div>
     <div class="col-md-3">
       <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
-        <span class="fa fa-plus"></span> Create Asset
+        <span class="fa fa-plus"></span> Create Participant
       </button>
     </div>
   </div>
@@ -70,23 +71,23 @@
       <table class="table table-bordered table-hover">
         <thead>
           <tr>
-            <th scope="col">AssetId</th>
-            <th scope="col">Owner</th>
-            <th scope="col">Value</th>
+            <th scope="col">ParticipantId</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let item of items">
-            <td>{{item.assetId}}</td>
-            <td>{{item.owner}}</td>
-            <td>{{item.value}}</td>
+            <td>{{item.participantId}}</td>
+            <td>{{item.firstName}}</td>
+            <td>{{item.lastName}}</td>
             <td>
               <div class="btn-group" role="group" aria-label="Actions">
-                <button (click)="editForm(item.assetId);" type="button" data-toggle="modal" data-target="#editModal">
+                <button (click)="editForm(item.participantId);" type="button" data-toggle="modal" data-target="#editModal">
                   <span class="fas fa-edit"></span>
                 </button>
-                <button (click)="setId(item.assetId);" type="button" data-toggle="modal" data-target="#deleteModal">
+                <button (click)="setId(item.participantId);" type="button" data-toggle="modal" data-target="#deleteModal">
                   <span class="fas fa-trash-alt"></span>
                 </button>
               </div>

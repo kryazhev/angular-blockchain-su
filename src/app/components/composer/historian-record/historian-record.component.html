@@ -45,33 +45,23 @@
     <strong>Error:</strong> {{errors}}
   </div>
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 text-primary">
       <h2>HistorianRecords</h2>
     </div>
   </div>
-  <br>
-  <div class="row" *ngIf="items">
-    <div class="col-md-12">
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <th scope="col">Type</th>
-            <th scope="col">Timestamp</th>
-            <th scope="col">Id</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let item of items">
-            <td>{{item.transactionType}}</td>
-            <td>{{item.transactionTimestamp | date : 'dd.MM.yyyy HH:mm:ss' }}</td>
-            <td>
-              <a (click)="editForm(item.transactionId);" href="#" class="btn" data-toggle="modal" data-target="#viewModal">
-                {{item.transactionId}}
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="row p-3 border border-primary bg-primary text-white" *ngIf="items">
+    <div class="col-12 col-md-5 col-lg-5">Type</div>
+    <div class="col-12 col-md-1 col-lg-1">Timestamp</div>
+    <div class="col-12 col-md-6 col-lg-6">Id</div>
+  </div>
+  <div class="row table-row p-1 border" [class.striped]="index % 2" *ngFor="let item of items; let index = index">
+    <div class="col-12 col-md-5 col-lg-5">{{item.transactionType}}</div>
+    <div class="col-12 col-md-1 col-lg-1">{{item.transactionTimestamp | date : 'dd.MM.yyyy HH:mm' }}</div>
+    <div class="col-12 col-md-6 col-lg-6">
+      <a (click)="editForm(item.transactionId);" href="#" data-toggle="modal" data-target="#viewModal">
+        {{item.transactionId}}
+      </a>
     </div>
   </div>
+
 </div>

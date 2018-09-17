@@ -29,7 +29,6 @@
     "jquery": "^3.3.1",
     "ngx-restangular": "^3.0.0",
     "path": "^0.12.7",
-    "popper.js": "^1.14.4",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },

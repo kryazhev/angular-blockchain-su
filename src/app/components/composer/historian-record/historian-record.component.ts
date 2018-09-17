@@ -46,13 +46,13 @@ export class HistorianRecordComponent extends BaseComponent<HistorianRecord> {
 
   setForm(item: HistorianRecord): void {
     this.form.setValue({
-      transactionId: item.transactionId,
-      transactionType: item.transactionType,
-      transactionInvoked: item.transactionInvoked,
-      participantInvoking: item.participantInvoking,
-      identityUsed: item.identityUsed,
-      eventsEmitted: item.eventsEmitted,
-      transactionTimestamp: item.transactionTimestamp
+      transactionId: item.transactionId || '',
+      transactionType: item.transactionType || '',
+      transactionInvoked: item.transactionInvoked || '',
+      participantInvoking: item.participantInvoking || '',
+      identityUsed: item.identityUsed || '',
+      eventsEmitted: item.eventsEmitted || '',
+      transactionTimestamp: item.transactionTimestamp || ''
     });
   }
 

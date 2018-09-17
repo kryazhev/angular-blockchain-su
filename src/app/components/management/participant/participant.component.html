@@ -55,47 +55,34 @@
     <strong>Error:</strong> {{errors}}
   </div>
   <div class="row">
-    <div class="col-md-9">
+    <div class="col-12 col-md-9 text-primary">
       <h2>SampleParticipant</h2>
     </div>
-    <div class="col-md-3">
+    <div class="col-12 col-md-3">
       <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
-        <span class="fa fa-plus"></span> Create Participant
+        <span class="fa fa-plus"></span> Create
       </button>
     </div>
   </div>
-  <br>
-  <div class="row" *ngIf="items">
-    <div class="col-md-12">
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <th scope="col">ParticipantId</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let item of items">
-            <td>{{item.participantId}}</td>
-            <td>{{item.firstName}}</td>
-            <td>{{item.lastName}}</td>
-            <td>
-              <div class="text-center">
-                <div class="btn-group" role="group" aria-label="Actions">
-                  <button (click)="editForm(item.participantId);" type="button" data-toggle="modal" data-target="#editModal">
-                    <span class="fas fa-edit"></span>
-                  </button>
-                  <button (click)="setId(item.participantId);" type="button" data-toggle="modal" data-target="#deleteModal">
-                    <span class="fas fa-trash-alt"></span>
-                  </button>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="row p-3 border border-primary bg-primary text-white" *ngIf="items">
+    <div class="col-12 col-md-4 col-lg-5">ParticipantId</div>
+    <div class="col-12 col-md-3 col-lg-3">First Name</div>
+    <div class="col-12 col-md-3 col-lg-3">Last Name</div>
+    <div class="col-12 col-md-2 col-lg-1">Actions</div>
+  </div>
+  <div class="row table-row p-1 border" [class.striped]="index % 2" *ngFor="let item of items; let index = index">
+    <div class="col-12 col-md-4 col-lg-5">{{item.participantId}}</div>
+    <div class="col-12 col-md-3 col-lg-3">{{item.firstName}}</div>
+    <div class="col-12 col-md-3 col-lg-3">{{item.lastName}}</div>
+    <div class="col-12 col-md-2 col-lg-1 text-white">
+      <div class="btn-group" role="group" aria-label="Actions">
+        <a (click)="editForm(item.participantId);" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal">
+          <span class="fas fa-edit"></span>
+        </a>
+        <a (click)="setId(item.participantId);" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#deleteModal">
+          <span class="fas fa-trash-alt"></span>
+        </a>
+      </div>
     </div>
   </div>
 </div>

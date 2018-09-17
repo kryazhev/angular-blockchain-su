@@ -1,6 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
-
 .flex-spacer {
     flex: 1 1 auto;
-  }
-  
+}
+
+.striped{
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+div.table-row:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}

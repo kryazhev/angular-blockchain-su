@@ -9,11 +9,11 @@ import { v4 as uuid } from 'uuid';
 })
 export class DataService<Type> {
 
-  constructor(@Inject('typeName') private typeName: string, private restangular: Restangular) { }
+  constructor(@Inject('TypeName') private typeName: string, @Inject('IdName') private idName: string, private restangular: Restangular) { }
 
   list(): Observable<Type[]> {
     console.log('list ');
-    return this.restangular.all(this.typeName).getList();
+    return this.restangular.all(this.typeName + '').getList();
   }
 
   one(id: any): Observable<Type> {
@@ -21,15 +21,23 @@ export class DataService<Type> {
     return this.restangular.one(this.typeName, id).get();
   }
 
+  save(item: any): Observable<Type> {
+    if (item[this.idName]) {
+      return this.update(item);
+    } else {
+      return this.create(item);
+    }
+  }
+
   create(item: any): Observable<Type> {
-    item.assetId = uuid();
+    item[this.idName] = uuid();
     console.log('Create ' + JSON.stringify(item));
     return this.restangular.all(this.typeName).post(item);
   }
 
   update(item: any): Observable<Type> {
-    const id = item.assetId;
-    item.assetId = undefined;
+    const id = item[this.idName];
+    item[this.idName] = undefined;
     console.log('Update ' + JSON.stringify(item));
     return this.restangular.one(this.typeName + '/' + id).customPUT(item);
   }
@@ -45,7 +53,7 @@ export function RestangularConfigFactory(RestangularProvider) {
 }
 
 function replacer(key, value) {
-  if (key === 'id' || key === 'assetId' || key === 'participantId') {
+  if (key === this.idName) {
     return undefined;
   } else {
     return value;

@@ -8,64 +8,76 @@ import { SampleAsset } from '../../../services/su.blockchain';
   selector: 'app-asset',
   templateUrl: './asset.component.html',
   styleUrls: ['./asset.component.scss'],
-  providers: [DataService, { provide: 'typeName', useValue: 'SampleAsset' }],
+  providers: [DataService, { provide: 'TypeName', useValue: 'SampleAsset' }, { provide: 'IdName', useValue: 'assetId' }],
 })
 export class AssetComponent implements OnInit {
 
-  myForm: FormGroup;
+  form: FormGroup;
 
-  private asset;
+  asset: SampleAsset;
   allAssets: SampleAsset[];
   currentId: number;
-  errorMessage: string;
+  errors: string;
+
+  formErrors = {
+    assetId: '',
+    owner: '',
+    value: ''
+  };
+
+  validationMessages = {
+    owner: {
+      required: 'Owner is required.',
+    },
+    value: {
+      required: 'Value is required.',
+      min: 'Value must be at least 1.',
+      max: 'Value cannot be more than 1000.'
+    },
+  };
 
   constructor(private dataService: DataService<SampleAsset>, private builder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.myForm = this.builder.group({
+    this.form = this.builder.group({
       assetId: ['', []],
       owner: ['', [Validators.required]],
-      value: ['', [Validators.required]],
+      value: ['', [Validators.required, Validators.min(1), Validators.max(1000)]],
     });
 
     this.loadAll();
+
+    this.onValueChanged(this.form, this.formErrors, this.validationMessages);
+
+    this.form.valueChanges
+      .subscribe(
+        data => { this.onValueChanged(this.form, this.formErrors, this.validationMessages, data); },
+        error => this.errors = <any>error.message);
   }
 
   loadAll(): void {
+    this.resetForm();
     this.dataService.list().subscribe(
       result => {
-        this.errorMessage = null;
         this.allAssets = result;
-      }, this.errorHandler);
+        this.errors = null;
+      },
+      error => this.errors = <any>error.message);
   }
 
-  saveAsset(): void {
-    this.asset = this.myForm.value;
-    this.asset.$class = 'su.blockchain.SampleAsset';
+  save(): void {
+    this.asset = this.form.value;
+    this.asset['$class'] = 'su.blockchain.SampleAsset';
 
-    if (!this.asset.assetId) {
-      this.dataService.create(this.asset).subscribe(
-        () => {
-          this.errorMessage = null;
-          this.resetForm();
-          this.loadAll();
-        }, this.errorHandler);
-    } else {
-      this.dataService.update(this.asset).subscribe(
-        () => {
-          this.errorMessage = null;
-          this.resetForm();
-          this.loadAll();
-        }, this.errorHandler);
-    }
+    this.dataService.save(this.asset).subscribe(
+      () => this.loadAll(),
+      error => this.errors = <any>error.message);
   }
 
-  deleteAsset(): void {
+  delete(): void {
     this.dataService.delete(this.currentId).subscribe(
-      () => {
-        this.errorMessage = null;
-        this.loadAll();
-      }, this.errorHandler);
+      () => this.loadAll(),
+      error => this.errors = <any>error.message);
   }
 
   setId(id: any): void {
@@ -74,31 +86,48 @@ export class AssetComponent implements OnInit {
 
   editForm(id: any): void {
     this.dataService.one(id).subscribe(
-      result => {
-        this.errorMessage = null;
-        this.myForm.setValue({
-          assetId: result.assetId,
-          owner: result.owner,
-          value: result.value
-        });
-      }, this.errorHandler);
+      result => this.setForm(result),
+      error => this.errors = <any>error.message);
+  }
+
+  setForm(item: SampleAsset): void {
+    this.form.setValue({
+      assetId: item.assetId,
+      owner: item.owner,
+      value: item.value
+    });
   }
 
   resetForm(): void {
-    this.myForm.setValue({
+    this.form.setValue({
       assetId: null,
       owner: null,
       value: null
     });
+
+    this.formErrors = {
+      assetId: '',
+      owner: '',
+      value: ''
+    };
   }
 
-  errorHandler(error?: any) {
-    if (error === 'Server error') {
-      this.errorMessage = 'Could not connect to REST server. Please check your configuration details';
-    } else if (error === '404 - Not Found') {
-      this.errorMessage = '404 - Could not find API route. Please check your available APIs.';
-    } else {
-      this.errorMessage = error;
+  onValueChanged(form: FormGroup, formErrors: object, validationMessages: object, data?: any) {
+    if (!form) { return; }
+    for (const field in formErrors) {
+      if (formErrors.hasOwnProperty(field)) {
+        // clear previous error message (if any)
+        formErrors[field] = '';
+        const control = form.get(field);
+        if (control && control.dirty && !control.valid) {
+          const messages = validationMessages[field];
+          for (const key in control.errors) {
+            if (control.errors.hasOwnProperty(key)) {
+              formErrors[field] += messages[key] + ' ';
+            }
+          }
+        }
+      }
     }
   }
 

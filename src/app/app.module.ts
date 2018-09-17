@@ -43,7 +43,7 @@ import { HomeComponent } from './components/home/home.component';
     AppRoutingModule,
     RestangularModule.forRoot(RestangularConfigFactory),
   ],
-  providers: [DataService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

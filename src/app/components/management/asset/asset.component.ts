@@ -7,7 +7,8 @@ import { SampleAsset } from '../../../services/su.blockchain';
 @Component({
   selector: 'app-asset',
   templateUrl: './asset.component.html',
-  styleUrls: ['./asset.component.scss']
+  styleUrls: ['./asset.component.scss'],
+  providers: [DataService, { provide: 'typeName', useValue: 'SampleAsset' }],
 })
 export class AssetComponent implements OnInit {
 
@@ -18,7 +19,7 @@ export class AssetComponent implements OnInit {
   currentId: number;
   errorMessage: string;
 
-  constructor(private dataService: DataService, private builder: FormBuilder) { }
+  constructor(private dataService: DataService<SampleAsset>, private builder: FormBuilder) { }
 
   ngOnInit(): void {
     this.myForm = this.builder.group({

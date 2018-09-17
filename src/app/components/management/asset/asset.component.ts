@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { Component} from '@angular/core';
+import { Validators, FormBuilder } from '@angular/forms';
 
 import { DataService } from '../../../services/data.service';
 import { SampleAsset } from '../../../services/su.blockchain';
+import { BaseComponent } from '../../base.component';
 
 @Component({
   selector: 'app-asset',
@@ -10,14 +11,7 @@ import { SampleAsset } from '../../../services/su.blockchain';
   styleUrls: ['./asset.component.scss'],
   providers: [DataService, { provide: 'TypeName', useValue: 'SampleAsset' }, { provide: 'IdName', useValue: 'assetId' }],
 })
-export class AssetComponent implements OnInit {
-
-  form: FormGroup;
-
-  asset: SampleAsset;
-  allAssets: SampleAsset[];
-  currentId: number;
-  errors: string;
+export class AssetComponent extends BaseComponent<SampleAsset> {
 
   formErrors = {
     assetId: '',
@@ -36,58 +30,28 @@ export class AssetComponent implements OnInit {
     },
   };
 
-  constructor(private dataService: DataService<SampleAsset>, private builder: FormBuilder) { }
+  constructor(dataService: DataService<SampleAsset>, builder: FormBuilder) {
+    super(dataService, builder);
+  }
 
-  ngOnInit(): void {
-    this.form = this.builder.group({
+  getClassName(): string {
+    return 'su.blockchain.SampleAsset';
+  }
+
+  getFormErrors() {
+    return this.formErrors;
+  }
+
+  getValidationMessages() {
+    return this.validationMessages;
+  }
+
+  buildForm() {
+    return this.builder.group({
       assetId: ['', []],
       owner: ['', [Validators.required]],
-      value: ['', [Validators.required, Validators.min(1), Validators.max(1000)]],
+      value: ['', [Validators.required, Validators.min(1), Validators.max(10000)]],
     });
-
-    this.loadAll();
-
-    this.onValueChanged(this.form, this.formErrors, this.validationMessages);
-
-    this.form.valueChanges
-      .subscribe(
-        data => { this.onValueChanged(this.form, this.formErrors, this.validationMessages, data); },
-        error => this.errors = <any>error.message);
-  }
-
-  loadAll(): void {
-    this.resetForm();
-    this.dataService.list().subscribe(
-      result => {
-        this.allAssets = result;
-        this.errors = null;
-      },
-      error => this.errors = <any>error.message);
-  }
-
-  save(): void {
-    this.asset = this.form.value;
-    this.asset['$class'] = 'su.blockchain.SampleAsset';
-
-    this.dataService.save(this.asset).subscribe(
-      () => this.loadAll(),
-      error => this.errors = <any>error.message);
-  }
-
-  delete(): void {
-    this.dataService.delete(this.currentId).subscribe(
-      () => this.loadAll(),
-      error => this.errors = <any>error.message);
-  }
-
-  setId(id: any): void {
-    this.currentId = id;
-  }
-
-  editForm(id: any): void {
-    this.dataService.one(id).subscribe(
-      result => this.setForm(result),
-      error => this.errors = <any>error.message);
   }
 
   setForm(item: SampleAsset): void {
@@ -110,25 +74,6 @@ export class AssetComponent implements OnInit {
       owner: '',
       value: ''
     };
-  }
-
-  onValueChanged(form: FormGroup, formErrors: object, validationMessages: object, data?: any) {
-    if (!form) { return; }
-    for (const field in formErrors) {
-      if (formErrors.hasOwnProperty(field)) {
-        // clear previous error message (if any)
-        formErrors[field] = '';
-        const control = form.get(field);
-        if (control && control.dirty && !control.valid) {
-          const messages = validationMessages[field];
-          for (const key in control.errors) {
-            if (control.errors.hasOwnProperty(key)) {
-              formErrors[field] += messages[key] + ' ';
-            }
-          }
-        }
-      }
-    }
   }
 
 }

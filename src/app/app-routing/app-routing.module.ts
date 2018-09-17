@@ -7,6 +7,7 @@ import { HomeComponent } from '../components/home/home.component';
 
 import { ParticipantComponent } from '../components/management/participant/participant.component';
 import { AssetComponent } from '../components/management/asset/asset.component';
+import { HistorianRecordComponent } from '../components/composer/historian-record/historian-record.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -17,6 +18,8 @@ const routes: Routes = [
   { path: 'projects/management/participants', component: ParticipantComponent},
   { path: 'projects/management/assets', component: AssetComponent},
   { path: 'projects/management/transactions', component: HomeComponent},
+
+  { path: 'system/historian-records', component: HistorianRecordComponent},
 ];
 
 @NgModule({

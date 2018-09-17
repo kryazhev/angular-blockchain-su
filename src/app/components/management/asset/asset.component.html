@@ -15,7 +15,7 @@
           </div>
           <div class="form-group text-left">
             <label for="value">Value</label>
-            <input formControlName="value" type="text" class="form-control" [class.is-invalid]="formErrors.value">
+            <input formControlName="value" class="form-control" [class.is-invalid]="formErrors.value">
             <div class="invalid-feedback" *ngIf="formErrors.value">{{formErrors.value}}</div>
           </div>
         </div>
@@ -82,13 +82,15 @@
             <td>{{item.owner}}</td>
             <td>{{item.value}}</td>
             <td>
-              <div class="btn-group" role="group" aria-label="Actions">
-                <button (click)="editForm(item.assetId);" type="button" data-toggle="modal" data-target="#editModal">
-                  <span class="fas fa-edit"></span>
-                </button>
-                <button (click)="setId(item.assetId);" type="button" data-toggle="modal" data-target="#deleteModal">
-                  <span class="fas fa-trash-alt"></span>
-                </button>
+              <div class="text-center">
+                <div class="btn-group" role="group" aria-label="Actions">
+                  <button (click)="editForm(item.assetId);" type="button" data-toggle="modal" data-target="#editModal">
+                    <span class="fas fa-edit"></span>
+                  </button>
+                  <button (click)="setId(item.assetId);" type="button" data-toggle="modal" data-target="#deleteModal">
+                    <span class="fas fa-trash-alt"></span>
+                  </button>
+                </div>
               </div>
             </td>
           </tr>

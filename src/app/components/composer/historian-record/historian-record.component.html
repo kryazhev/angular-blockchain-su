@@ -1,0 +1,77 @@
+<div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="viewModalLabel">View Historian Record</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <form [formGroup]="form" novalidate class="needs-validation">
+        <div class="modal-body">
+          <div class="form-group text-left">
+            <label for="transactionId">Id</label>
+            <textarea formControlName="transactionId" class="form-control"></textarea>
+          </div>
+          <div class="form-group text-left">
+            <label for="transactionType">Type</label>
+            <input formControlName="transactionType" class="form-control">
+          </div>
+          <div class="form-group text-left">
+            <label for="transactionInvoked">Invoked</label>
+            <textarea formControlName="transactionInvoked" class="form-control"></textarea>
+          </div>
+          <div class="form-group text-left">
+            <label for="participantInvoking">Invoking</label>
+            <textarea formControlName="participantInvoking" class="form-control"></textarea>
+          </div>
+          <div class="form-group text-left">
+            <label for="identityUsed">Identity</label>
+            <textarea formControlName="identityUsed" class="form-control"></textarea>
+          </div>
+          <div class="form-group text-left">
+            <label for="transactionTimestamp">Timestamp</label>
+            <input formControlName="transactionTimestamp" class="form-control">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div *ngIf="errors" class="alert alert-danger" role="alert">
+    <strong>Error:</strong> {{errors}}
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h2>HistorianRecords</h2>
+    </div>
+  </div>
+  <br>
+  <div class="row" *ngIf="items">
+    <div class="col-md-12">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Timestamp</th>
+            <th scope="col">Id</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of items">
+            <td>{{item.transactionType}}</td>
+            <td>{{item.transactionTimestamp | date : 'dd.MM.yyyy HH:mm:ss' }}</td>
+            <td>
+              <a (click)="editForm(item.transactionId);" href="#" class="btn" data-toggle="modal" data-target="#viewModal">
+                {{item.transactionId}}
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

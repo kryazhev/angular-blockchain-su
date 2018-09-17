@@ -19,6 +19,7 @@ import { HomeComponent } from './components/home/home.component';
 
 import { ParticipantComponent } from './components/management/participant/participant.component';
 import { AssetComponent } from './components/management/asset/asset.component';
+import { HistorianRecordComponent } from './components/composer/historian-record/historian-record.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,8 @@ import { AssetComponent } from './components/management/asset/asset.component';
 
     ParticipantComponent,
     AssetComponent,
+
+    HistorianRecordComponent,
 
   ],
   imports: [

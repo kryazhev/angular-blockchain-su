@@ -15,13 +15,12 @@
           </div>
           <div class="form-group text-left">
             <label for="lastName">Last Name</label>
-            <input formControlName="lastName" type="text" class="form-control" [class.is-invalid]="formErrors.lastName">
+            <input formControlName="lastName" class="form-control" [class.is-invalid]="formErrors.lastName">
             <div class="invalid-feedback" *ngIf="formErrors.lastName">{{formErrors.lastName}}</div>
           </div>
         </div>
 
         <div class="modal-footer">
-          <div>{{formErrors.firstName}} {{formErrors.lastName}}</div>
           <button (click)="save()" type="submit" class="btn btn-primary" [disabled]="form.invalid" [class.disabled]="form.invalid"
             data-dismiss="modal">Save</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -83,13 +82,15 @@
             <td>{{item.firstName}}</td>
             <td>{{item.lastName}}</td>
             <td>
-              <div class="btn-group" role="group" aria-label="Actions">
-                <button (click)="editForm(item.participantId);" type="button" data-toggle="modal" data-target="#editModal">
-                  <span class="fas fa-edit"></span>
-                </button>
-                <button (click)="setId(item.participantId);" type="button" data-toggle="modal" data-target="#deleteModal">
-                  <span class="fas fa-trash-alt"></span>
-                </button>
+              <div class="text-center">
+                <div class="btn-group" role="group" aria-label="Actions">
+                  <button (click)="editForm(item.participantId);" type="button" data-toggle="modal" data-target="#editModal">
+                    <span class="fas fa-edit"></span>
+                  </button>
+                  <button (click)="setId(item.participantId);" type="button" data-toggle="modal" data-target="#deleteModal">
+                    <span class="fas fa-trash-alt"></span>
+                  </button>
+                </div>
               </div>
             </td>
           </tr>

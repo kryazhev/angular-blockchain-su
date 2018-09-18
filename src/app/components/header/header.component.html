@@ -1,12 +1,151 @@
-<mat-toolbar color="primary">
-  <span><img src="/assets/img/usqm-red.png" height=42 width=42></span>
-  <a mat-button routerLink="/home" routerLinkActive="active"><span class="fa fa-home fa-lg"></span> Home</a>
-  <a mat-button routerLink="/projects" routerLinkActive="active"><span class="fas fa-project-diagram fa-lg"></span> Projects</a>
-  <a mat-button routerLink="/about-us" routerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> About</a>
-  <a mat-button routerLink="/contact-us" routerLinkActive="active"><span class="fa fa-seedling fa-lg"></span> Contact</a>
-  <span class="flex-spacer"></span>
-  <a mat-button routerLink="/projects/management/participants" routerLinkActive="active">Participants</a>
-  <a mat-button routerLink="/projects/management/assets" routerLinkActive="active">Assets</a>
-  <a mat-button routerLink="/projects/management/transactions" routerLinkActive="active">Transactions</a>
-  <a mat-button routerLink="/system/historian-records" routerLinkActive="active">History</a>
-</mat-toolbar>
+<!-- Lang Dialog -->
+<div class="modal fade" id="langModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Помощь с переводом</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>На данный момент пользовательский интерфейс поддерживается только на языках: <span class="flag-icon flag-icon-ru"></span>
+          ru.</p>
+        <p>Если вы можете помочь с переводом на другие языки, то файл для перевода вы можете скачать <a href="/static/i18n/locale_ru.ini"
+            target="_blank">здесь</a>.</p>
+        <p>После перевода отправьте файл по адресу blockchain.ussr@gmail.com</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg bg-primary fixed-top">
+  <div class="container">
+    <a class="navbar-brand text-white" routerLink="/home" routerLinkActive="active">
+      <span class="fa fa-home fa-lg"></span> Home
+    </a>
+    <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false">
+      <span class="fa fa-bars fa-lg"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a id="navbarProjects" class="nav-link dropdown-toggle text-white" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span class="fa fa-project-diagram fa-lg"></span> Projects
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarProjects">
+            <a class="dropdown-item" href="/project/housing-cooperative.html">
+              <span class="fa fa-file-contract fa-lg"></span> Housing cooperative
+            </a>
+            <a class="dropdown-item" href="/project/ussr-2.0.html">
+              <span class="fa fa-dove fa-lg"></span> USSR 2.0
+            </a>
+            <a class="dropdown-item" href="/project/pension-fund.html">
+              <span class="fa fa-blind fa-lg"></span> Pension Fund
+            </a>
+            <a class="dropdown-item" href="/project/municipal-services.html">
+              <span class="fa fa-clipboard-list fa-lg"></span> Municipal Services
+            </a>
+            <a class="dropdown-item" href="/project/bank.html">
+              <span class="fa fa-piggy-bank fa-lg"></span> Bank
+            </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a id="navbarManagement" class="nav-link dropdown-toggle text-white" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span class="fa fa-screwdriver fa-lg"></span> Management
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarManagement">
+            <a class="dropdown-item" routerLink="/projects/management/participants" routerLinkActive="active">
+              <span class="fa fa-users fa-lg"></span> Participants
+            </a>
+            <a class="dropdown-item" routerLink="/projects/management/assets" routerLinkActive="active">
+              <span class="fa fa-book-open fa-lg"></span> Assets
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink="/system/historian-records" routerLinkActive="active">
+              <span class="fa fa-history fa-lg"></span> Historian Records
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/about-us" routerLinkActive="active">
+            <span class="fa fa-address-card fa-lg"></span> About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/contact-us" routerLinkActive="active">
+            <span class="fa fa-seedling fa-lg"></span> Contact Us</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <span class="flag-icon flag-icon-ru"></span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarLanguages">
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-ru"></span> Pусский язык
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-us"></span> English
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-az"></span>Azərbaycan dili
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-am"></span> Հայերենի լեզուն
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-by"></span> Беларускую мову
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-ge"></span> ქართული ენა
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-kz"></span> Қазақ тілі
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-kg"></span> Кыргыз
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-lv"></span> Latviešu valoda
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-lt"></span> Lietuvių kalba
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-md"></span> Limba moldovenească
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-tj"></span> Забони тоҷикӣ
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-tm"></span> Türkmen dili
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-ua"></span> Українська мова
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-uz"></span> O'zbek
+            </a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+              <span class="flag-icon flag-icon-ee"></span> Eesti keel
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#loginModal">
+            <span class="fa fa-sign-in-alt fa-lg"></span> Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

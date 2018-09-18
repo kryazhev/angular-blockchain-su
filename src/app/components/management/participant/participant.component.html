@@ -1,9 +1,9 @@
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-primary text-white">
         <h4 class="modal-title" id="editModalLabel">Edit Participant</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form [formGroup]="form" novalidate class="needs-validation">
         <input formControlName="participantId" type="hidden">
@@ -33,9 +33,9 @@
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-primary text-white">
         <h4 class="modal-title" id="deleteModalLabel">Delete Participant</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form [formGroup]="form">
         <div class="modal-body">
@@ -50,39 +50,37 @@
   </div>
 </div>
 
-<div class="container">
-  <div *ngIf="errors" class="alert alert-danger" role="alert">
-    <strong>Error:</strong> {{errors}}
+<div *ngIf="errors" class="alert alert-danger" role="alert">
+  <strong>Error:</strong> {{errors}}
+</div>
+<div class="row">
+  <div class="col-12 col-md-9 text-primary">
+    <h2>SampleParticipant</h2>
   </div>
-  <div class="row">
-    <div class="col-12 col-md-9 text-primary">
-      <h2>SampleParticipant</h2>
-    </div>
-    <div class="col-12 col-md-3">
-      <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
-        <span class="fa fa-plus"></span> Create
-      </button>
-    </div>
+  <div class="col-12 col-md-3">
+    <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
+      <span class="fa fa-plus"></span> Create
+    </button>
   </div>
-  <div class="row p-3 border border-primary bg-primary text-white" *ngIf="items">
-    <div class="col-12 col-md-4 col-lg-5">ParticipantId</div>
-    <div class="col-12 col-md-3 col-lg-3">First Name</div>
-    <div class="col-12 col-md-3 col-lg-3">Last Name</div>
-    <div class="col-12 col-md-2 col-lg-1">Actions</div>
-  </div>
-  <div class="row table-row p-1 border" [class.striped]="index % 2" *ngFor="let item of items; let index = index">
-    <div class="col-12 col-md-4 col-lg-5">{{item.participantId}}</div>
-    <div class="col-12 col-md-3 col-lg-3">{{item.firstName}}</div>
-    <div class="col-12 col-md-3 col-lg-3">{{item.lastName}}</div>
-    <div class="col-12 col-md-2 col-lg-1 text-white">
-      <div class="btn-group" role="group" aria-label="Actions">
-        <a (click)="editForm(item.participantId);" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal">
-          <span class="fas fa-edit"></span>
-        </a>
-        <a (click)="setId(item.participantId);" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#deleteModal">
-          <span class="fas fa-trash-alt"></span>
-        </a>
-      </div>
+</div>
+<div class="row p-3 border border-primary bg-primary text-white" *ngIf="items">
+  <div class="col-12 col-md-4 col-lg-5">ParticipantId</div>
+  <div class="col-12 col-md-3 col-lg-3">First Name</div>
+  <div class="col-12 col-md-3 col-lg-3">Last Name</div>
+  <div class="col-12 col-md-2 col-lg-1">Actions</div>
+</div>
+<div class="row table-row p-1 border" [class.striped]="index % 2" *ngFor="let item of items; let index = index">
+  <div class="col-12 col-md-4 col-lg-5">{{item.participantId}}</div>
+  <div class="col-12 col-md-3 col-lg-3">{{item.firstName}}</div>
+  <div class="col-12 col-md-3 col-lg-3">{{item.lastName}}</div>
+  <div class="col-12 col-md-2 col-lg-1 text-white">
+    <div class="btn-group" role="group" aria-label="Actions">
+      <a (click)="editForm(item.participantId);" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal">
+        <span class="fas fa-edit"></span>
+      </a>
+      <a (click)="setId(item.participantId);" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#deleteModal">
+        <span class="fas fa-trash-alt"></span>
+      </a>
     </div>
   </div>
 </div>

@@ -1,9 +1,9 @@
 <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-primary text-white">
         <h4 class="modal-title" id="viewModalLabel">View Historian Record</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form [formGroup]="form" novalidate class="needs-validation">
         <div class="modal-body">
@@ -40,28 +40,25 @@
   </div>
 </div>
 
-<div class="container">
-  <div *ngIf="errors" class="alert alert-danger" role="alert">
-    <strong>Error:</strong> {{errors}}
+<div *ngIf="errors" class="alert alert-danger" role="alert">
+  <strong>Error:</strong> {{errors}}
+</div>
+<div class="row">
+  <div class="col-12 text-primary">
+    <h2>HistorianRecords</h2>
   </div>
-  <div class="row">
-    <div class="col-12 text-primary">
-      <h2>HistorianRecords</h2>
-    </div>
+</div>
+<div class="row p-3 border border-primary bg-primary text-white" *ngIf="items">
+  <div class="col-12 col-md-5 col-lg-5">Type</div>
+  <div class="col-12 col-md-1 col-lg-1">Timestamp</div>
+  <div class="col-12 col-md-6 col-lg-6">Id</div>
+</div>
+<div class="row table-row p-1 border" [class.striped]="index % 2" *ngFor="let item of items; let index = index">
+  <div class="col-12 col-md-5 col-lg-5">{{item.transactionType}}</div>
+  <div class="col-12 col-md-1 col-lg-1">{{item.transactionTimestamp | date : 'dd.MM.yyyy HH:mm' }}</div>
+  <div class="col-12 col-md-6 col-lg-6">
+    <a (click)="editForm(item.transactionId);" href="#" data-toggle="modal" data-target="#viewModal">
+      {{item.transactionId}}
+    </a>
   </div>
-  <div class="row p-3 border border-primary bg-primary text-white" *ngIf="items">
-    <div class="col-12 col-md-5 col-lg-5">Type</div>
-    <div class="col-12 col-md-1 col-lg-1">Timestamp</div>
-    <div class="col-12 col-md-6 col-lg-6">Id</div>
-  </div>
-  <div class="row table-row p-1 border" [class.striped]="index % 2" *ngFor="let item of items; let index = index">
-    <div class="col-12 col-md-5 col-lg-5">{{item.transactionType}}</div>
-    <div class="col-12 col-md-1 col-lg-1">{{item.transactionTimestamp | date : 'dd.MM.yyyy HH:mm' }}</div>
-    <div class="col-12 col-md-6 col-lg-6">
-      <a (click)="editForm(item.transactionId);" href="#" data-toggle="modal" data-target="#viewModal">
-        {{item.transactionId}}
-      </a>
-    </div>
-  </div>
-
 </div>

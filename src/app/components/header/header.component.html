@@ -3,20 +3,18 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Помощь с переводом</h5>
+        <h5 class="modal-title">{{ 'translation.dialog.header' | i18n}}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>На данный момент пользовательский интерфейс поддерживается только на языках: <span class="flag-icon flag-icon-ru"></span>
-          ru.</p>
-        <p>Если вы можете помочь с переводом на другие языки, то файл для перевода вы можете скачать <a href="/static/i18n/locale_ru.ini"
-            target="_blank">здесь</a>.</p>
-        <p>После перевода отправьте файл по адресу blockchain.ussr@gmail.com</p>
+        <p [innerHtml]="'translation.dialog.p1' | i18n | safe"></p>
+        <p [innerHtml]="'translation.dialog.p2' | i18n | safe"></p>
+        <p [innerHtml]="'translation.dialog.p3' | i18n | safe"></p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ 'action.close' | i18n}}</button>
       </div>
     </div>
   </div>
@@ -25,7 +23,7 @@
 <nav class="navbar navbar-expand-lg bg-primary fixed-top">
   <div class="container">
     <a class="navbar-brand text-white" routerLink="/home" routerLinkActive="active">
-      <span class="fa fa-home fa-lg"></span> Home
+      <span class="fa fa-home fa-lg"></span> {{ 'navigation.home' | i18n}}
     </a>
     <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false">
@@ -37,51 +35,51 @@
         <li class="nav-item dropdown">
           <a id="navbarProjects" class="nav-link dropdown-toggle text-white" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <span class="fa fa-project-diagram fa-lg"></span> Projects
+            <span class="fa fa-project-diagram fa-lg"></span> {{ 'navigation.projects' | i18n}}
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarProjects">
             <a class="dropdown-item" href="/project/housing-cooperative.html">
-              <span class="fa fa-file-contract fa-lg"></span> Housing cooperative
+              <span class="fa fa-file-contract fa-lg"></span> {{ 'project.housing-cooperative' | i18n}}
             </a>
             <a class="dropdown-item" href="/project/ussr-2.0.html">
-              <span class="fa fa-dove fa-lg"></span> USSR 2.0
+              <span class="fa fa-dove fa-lg"></span> {{ 'project.housing-ussr-2.0' | i18n}}
             </a>
             <a class="dropdown-item" href="/project/pension-fund.html">
-              <span class="fa fa-blind fa-lg"></span> Pension Fund
+              <span class="fa fa-blind fa-lg"></span> {{ 'project.pension-fund' | i18n}}
             </a>
             <a class="dropdown-item" href="/project/municipal-services.html">
-              <span class="fa fa-clipboard-list fa-lg"></span> Municipal Services
+              <span class="fa fa-clipboard-list fa-lg"></span> {{ 'project.municipal-services' | i18n}}
             </a>
             <a class="dropdown-item" href="/project/bank.html">
-              <span class="fa fa-piggy-bank fa-lg"></span> Bank
+              <span class="fa fa-piggy-bank fa-lg"></span> {{ 'project.bank' | i18n}}
             </a>
           </div>
         </li>
         <li class="nav-item dropdown">
           <a id="navbarManagement" class="nav-link dropdown-toggle text-white" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <span class="fa fa-screwdriver fa-lg"></span> Management
+            <span class="fa fa-screwdriver fa-lg"></span> {{ 'navigation.management' | i18n}}
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarManagement">
             <a class="dropdown-item" routerLink="/projects/management/participants" routerLinkActive="active">
-              <span class="fa fa-users fa-lg"></span> Participants
+              <span class="fa fa-users fa-lg"></span> {{ 'navigation.management.participants' | i18n}}
             </a>
             <a class="dropdown-item" routerLink="/projects/management/assets" routerLinkActive="active">
-              <span class="fa fa-book-open fa-lg"></span> Assets
+              <span class="fa fa-book-open fa-lg"></span> {{ 'navigation.management.assets' | i18n}}
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" routerLink="/system/historian-records" routerLinkActive="active">
-              <span class="fa fa-history fa-lg"></span> Historian Records
+              <span class="fa fa-history fa-lg"></span> {{ 'navigation.management.historian-records' | i18n}}
             </a>
           </div>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" routerLink="/about-us" routerLinkActive="active">
-            <span class="fa fa-address-card fa-lg"></span> About Us</a>
+            <span class="fa fa-address-card fa-lg"></span> {{ 'navigation.about-us' | i18n}}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" routerLink="/contact-us" routerLinkActive="active">
-            <span class="fa fa-seedling fa-lg"></span> Contact Us</a>
+            <span class="fa fa-seedling fa-lg"></span> {{ 'navigation.contact-us' | i18n}}</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
@@ -143,7 +141,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#loginModal">
-            <span class="fa fa-sign-in-alt fa-lg"></span> Login</a>
+            <span class="fa fa-sign-in-alt fa-lg"></span> {{ 'action.login' | i18n}}</a>
         </li>
       </ul>
     </div>

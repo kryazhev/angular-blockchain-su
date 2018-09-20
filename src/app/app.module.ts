@@ -22,11 +22,13 @@ import { AssetComponent } from './components/management/asset/asset.component';
 import { HistorianRecordComponent } from './components/composer/historian-record/historian-record.component';
 import { I18nService } from './services/i18n.service';
 
-import { I18nPipe } from './i18n.pipe';
+import { I18nPipe } from './pipes/i18n.pipe';
+import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
     I18nPipe,
+    SafePipe,
 
     AppComponent,
 

@@ -16,6 +16,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 
 import { HomeComponent } from './components/home/home.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 import { ParticipantComponent } from './components/management/participant/participant.component';
 import { AssetComponent } from './components/management/asset/asset.component';
@@ -24,7 +26,6 @@ import { I18nService } from './services/i18n.service';
 
 import { I18nPipe } from './pipes/i18n.pipe';
 import { SafePipe } from './pipes/safe.pipe';
-import { AboutUsComponent } from './components/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 
     HomeComponent,
     AboutUsComponent,
+    ContactUsComponent,
 
     ParticipantComponent,
     AssetComponent,

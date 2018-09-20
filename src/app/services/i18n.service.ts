@@ -108,6 +108,36 @@ const MESSAGES_RU = {
   'quote.q5': 'Великие умы обсуждают идеи. Средние умы обсуждают события. Мелкие умы обсуждают людей.',
   'quote.q5.author': 'Элеонора Рузвельт',
 
+  'contact-us.donate.header': 'Поддержать проект',
+  // tslint:disable-next-line:max-line-length
+  'contact-us.donate.p1': 'На текущий момент данный проект реализуется силами одного человека. К сожалению, я не обладаю ни материальными, ни информационными ресурсами. Я глубоко убежден, что реализация представленных проектов может принести большую пользу обществу. Любая помощь приветствуется и очень нужна ваша поддержка. Ниже приведен список моих банковских карт, либо кошельков.',
+
+  'contact-us.donate.sberbank': 'Карта Сбербанка России',
+  'contact-us.donate.alphabank': 'Карта Альфа-Банка России',
+  'contact-us.donate.web-money.wmr': 'Кошелек WMR',
+  'contact-us.donate.web-money.wmz': 'Кошелек WMZ',
+  'contact-us.donate.web-money.wmx': 'Кошелек WMX',
+  'contact-us.donate.web-money.wmh': 'Кошелек WMH',
+  'contact-us.donate.bitcoin': 'Кошелек Bitcoin',
+  'contact-us.donate.bitcoin-cash': 'Кошелек BitcoinCash',
+
+  'contact-us.donate.alert': 'На текущий момент никакие кошельки не указаны, так как проект еще не достиг даже стадии пилотной версии.',
+
+  'contact-us.feedback.header': 'Обратная связь',
+  // tslint:disable-next-line:max-line-length
+  'contact-us.feedback.p1': 'Для связи со мной вы можете воспользоваться данной формой. Мои ресурсы очень ограничены, поэтому заранее приношу извинения, если я вам не отвечу.',
+
+  'contact-us.feedback.form.email': 'Ваш емайл',
+  'contact-us.feedback.form.message': 'Сообщение',
+
+  'contact-us.feedback.form.validation-error.field-required': 'Обязательное поле.',
+
+  'contact-us.feedback.action-result.success': 'Ваше сообщение было успешно отправлено.',
+  'contact-us.feedback.action-result.fail': '=При отправке сообщения произошла ошибка.',
+
+  // tslint:disable-next-line:max-line-length
+  'contact-us.feedback.alert': 'Отправка почты на данный момент не работает, так как сервис отправки почты платный и пока он не подключен. Вы можете отправить письмо на адрес blockchain.ussr@gmail.com.',
+
   '': '',
 };
 
@@ -197,5 +227,34 @@ const MESSAGES_EN = {
   'quote.q5': 'Great minds discuss ideas. Average minds discuss events. Small minds discuss people.',
   'quote.q5.author': 'Eleanor Roosevelt',
 
+  'contact-us.donate.header': 'Donate to the project',
+  // tslint:disable-next-line:max-line-length
+  'contact-us.donate.p1': 'At the moment, this project team is only one person. Unfortunately I am lacking any financial or media resources. I strongly believe that the implementation of the projects listed on this ite can bring make a big positive impact to society. Any help is welcome and your support is highly anticipated and appreciated. Below is a list of my bank cards or wallets.',
+
+  'contact-us.donate.sberbank': 'Sberbank of Russia',
+  'contact-us.donate.alphabank': 'Alfa-Bank of Russia',
+  'contact-us.donate.web-money.wmr': 'WMR purse',
+  'contact-us.donate.web-money.wmz': 'WMZ purse',
+  'contact-us.donate.web-money.wmx': 'WMX purse',
+  'contact-us.donate.web-money.wmh': 'WMH purse',
+  'contact-us.donate.bitcoin': 'Bitcoin Wallet',
+  'contact-us.donate.bitcoin-cash': 'BitcoinCash Wallet',
+
+  'contact-us.donate.alert': 'At the moment no wallets are listed since the project has not even reached the stage of the pilot version.',
+
+  'contact-us.feedback.header': 'Feedback',
+  // tslint:disable-next-line:max-line-length
+  'contact-us.feedback.p1': 'You can use this form to contact me. My resources including time are very limited, so I apologize in advance if I can’t answer you.',
+
+  'contact-us.feedback.form.email': 'Your email',
+  'contact-us.feedback.form.message': 'Message',
+
+  'contact-us.feedback.form.validation-error.field-required': 'Required.',
+
+  'contact-us.feedback.action-result.success': 'Your message was successfully sent.',
+  'contact-us.feedback.action-result.fail': 'An error occurred while sending the message.',
+
+  // tslint:disable-next-line:max-line-length
+  'contact-us.feedback.alert': 'Email service is not enabled at the moment since it is paid so it is not connected yet. You can send an email to blockchain.ussr@gmail.com.',
   '': '',
 };

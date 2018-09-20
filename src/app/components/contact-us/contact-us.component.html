@@ -1,0 +1,106 @@
+<div class="row">
+
+  <div class="col-12 mt-3">
+    <h5 id="donate">{{"contact-us.donate.header" | i18n}}</h5>
+    <p>{{"contact-us.donate.p1" | i18n}}</p>
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#sberbank" role="tab" data-toggle="tab">
+          <img src="/assets/img/logo/sber.ico" width="24" height="24" /> Сбербанк
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#alphabank" role="tab" data-toggle="tab">
+          <img src="/assets/img/logo/alpha.png" width="24" height="24" /> Альфа-Банк
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#web-money" role="tab" data-toggle="tab">
+          <img src="/assets/img/logo/web-money.ico" width="24" height="24" /> WebMoney
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#bitcoin" role="tab" data-toggle="tab">
+          <img src="/assets/img/logo/bitcoin.png" width="24" height="24" /> Bitcoin
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#bitcoin-cash" role="tab" data-toggle="tab">
+          <img src="/assets/img/logo/bitcoin-cash.png" width="24" height="24" /> BitcoinCash
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content mt-3 mb-3">
+      <div role="tabpanel" class="tab-pane fade show active" id="sberbank">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{"contact-us.donate.sberbank" | i18n}} - TODO</li>
+        </ul>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="alphabank">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{"contact-us.donate.alphabank" | i18n}} - TODO</li>
+        </ul>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="web-money">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{"contact-us.donate.web-money.wmr" | i18n}} - TODO</li>
+          <li class="list-group-item">{{"contact-us.donate.web-money.wmz" | i18n}} - TODO</li>
+          <li class="list-group-item">{{"contact-us.donate.web-money.wmx" | i18n}} - TODO</li>
+          <li class="list-group-item">{{"contact-us.donate.web-money.wmh" | i18n}} - TODO</li>
+        </ul>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="bitcoin">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{"contact-us.donate.bitcoin" | i18n}} - TODO</li>
+        </ul>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="bitcoin-cash">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{"contact-us.donate.bitcoin-cash" | i18n}} - TODO</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 mt-3">
+    TODO alert
+  </div>
+
+  <div class="col-12 mt-3">
+    <h5 id="feedback">{{"contact-us.feedback.header" | i18n}}</h5>
+    <p>{{"contact-us.feedback.p1" | i18n}}</p>
+
+    <form id="feedbackForm" action="/action/feedback" method="post" class="border border-primary rounded shadow-lg  p-3 needs-validation"
+      novalidate autocomplete="off">
+      <div class="row form-group">
+        <label for="email" class="col-md-2 col-form-label">{{"contact-us.feedback.form.email" | i18n}}</label>
+        <div class="col-md-10">
+          <input id="email" name="email" type="text" class="form-control" placeholder="name@mail.ru" required />
+          <div class="invalid-tooltip">{{"contact-us.feedback.form.validation-error.field-required" | i18n}}</div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="message" class="col-md-2 col-form-label">{{"contact-us.feedback.form.message" | i18n}}</label>
+        <div class="col-md-10">
+          <textarea id="message" name="message" class="form-control" rows="7" required></textarea>
+          <div class="invalid-tooltip">{{"contact-us.feedback.form.validation-error.field-required" | i18n}}</div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="offset-md-2 col-md-10">
+          <button id="feedbackButton" type="submit" class="btn btn-primary">{{"action.send" | i18n}}</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-12 mt-3">
+    TODO alert
+  </div>
+</div>

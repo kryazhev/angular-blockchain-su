@@ -163,6 +163,22 @@ const MESSAGES_RU = {
   // tslint:disable-next-line:max-line-length
   'project.municipal-services.proposal.p2': 'Для начала создать площадку, в которой просто собрать интересные идеи и начать общественное обсуждение. С дальнейшей реализацией наиболее интересных идей.',
 
+  'project.pension-fund.challenge.header': 'Проблема',
+  'project.pension-fund.challenge.p1': 'Пенсионный возраст в Российской Федерации в ближайшее время будет увеличен.',
+
+  'project.pension-fund.proposal.header': 'Общие рассуждения',
+  // tslint:disable-next-line:max-line-length
+  'project.pension-fund.proposal.p1': 'Необходимы альтернативные идеи по пенсионной реформе. Каких то - волшебных рецептов, как всех осчастливить, не существует. Но для тех людей, которые хотят сами управлять своей жизнью - есть предложение. Давайте объединимся и создадим свой собственный пенсионный фонд, управление которым мы возьмем на себя. Правила, по которым будет действовать фонд, мы придумаем сами, например:',
+  'project.pension-fund.proposal.p1.i1': 'своими средствами каждый управляет сам',
+  // tslint:disable-next-line:max-line-length
+  'project.pension-fund.proposal.p1.i2': 'предусмотрено несколько возможностей для инвестирования (для самых отчаянных, в том числе, в крипто-валюту)',
+  // tslint:disable-next-line:max-line-length
+  'project.pension-fund.proposal.p1.i3': 'есть возможность забрать накопления (возможно, это противоречит законодательству, но законы меняются...)',
+  'project.pension-fund.proposal.p1.i4': 'любое правило, которое мы еще придумаем',
+  'project.pension-fund.proposal.p1.i4.badge': 'Новое',
+  // tslint:disable-next-line:max-line-length
+  'project.pension-fund.proposal.p2': 'К сожалению, у такого фонда тоже будут недостатки. Например, отсутствие сотрудников и соответственно клиентское обслуживание будет сведено к минимуму. Хотя в век цифровых технологий, если достаточное количество усилий приложить, обслуживание может быть автоматизировано.',
+
   '': '',
 };
 
@@ -306,6 +322,22 @@ const MESSAGES_EN = {
   'project.municipal-services.proposal.p1': 'Blockchain technology has a great potential to revolutionize those services. Management system with a fully open accounting and transparent voting system would bring a service quality to a new heights.',
   // tslint:disable-next-line:max-line-length
   'project.municipal-services.proposal.p2': 'As a starting point - create a platform aimed to collect interesting ideas and start a public discussions. Further implementation of the best ones should follow.',
+
+  'project.pension-fund.challenge.header': 'Challenge',
+  'project.pension-fund.challenge.p1': 'The Social Security Retirement Age Increases for Russian citizens in nearest future',
+
+  'project.pension-fund.proposal.header': 'General reasoning',
+  // tslint:disable-next-line:max-line-length
+  'project.pension-fund.proposal.p1': 'There is a need for alternative ideas for pension reform. There is no magic bullet that will will resolve issues an will make everyone happy. But there is a proposal for those who want to manage their own lives: Let\'s unite and create our own pension fund and take over the management ourselves. And we will define the rules, according to which out fund will operate:',
+  'project.pension-fund.proposal.p1.i1': 'everyone manages his own funds by himself',
+  // tslint:disable-next-line:max-line-length
+  'project.pension-fund.proposal.p1.i2': 'there are several investment options (for the most desperate - we can even include crypto-currency)',
+  // tslint:disable-next-line:max-line-length
+  'project.pension-fund.proposal.p1.i3': 'there is an opportunity to withdraw the savings (perhaps this is contrary to the law, but the laws vary ...)',
+  'project.pension-fund.proposal.p1.i4': 'any other rule that we will come up with in future',
+  'project.pension-fund.proposal.p1.i4.badge': 'New',
+  // tslint:disable-next-line:max-line-length
+  'project.pension-fund.proposal.p2': 'Unfortunately, such a fund also has its shortcomings. For example: due to the lack of staff customer service will be limited. Although in the modern days of digital technologies the service can be automated, we just have to work on it.',
 
   '': '',
 };

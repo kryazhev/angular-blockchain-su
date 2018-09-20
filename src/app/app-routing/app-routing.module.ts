@@ -13,6 +13,7 @@ import { ParticipantComponent } from '../components/management/participant/parti
 import { AssetComponent } from '../components/management/asset/asset.component';
 import { HistorianRecordComponent } from '../components/composer/historian-record/historian-record.component';
 import { MunicipalServicesComponent } from '../components/projects/municipal-services/municipal-services.component';
+import { PensionFundComponent } from '../components/projects/pension-fund/pension-fund.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent},
   { path: 'contact-us', component: ContactUsComponent},
 
+  { path: 'projects/pension-fund', component: PensionFundComponent},
   { path: 'projects/municipal-services', component: MunicipalServicesComponent},
   { path: 'projects/bank', component: BankComponent},
 

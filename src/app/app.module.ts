@@ -19,6 +19,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
+import { PensionFundComponent } from './components/projects/pension-fund/pension-fund.component';
 import { MunicipalServicesComponent } from './components/projects/municipal-services/municipal-services.component';
 import { BankComponent } from './components/projects/bank/bank.component';
 
@@ -48,6 +49,7 @@ import { SafePipe } from './pipes/safe.pipe';
     AboutUsComponent,
     ContactUsComponent,
 
+    PensionFundComponent,
     MunicipalServicesComponent,
     BankComponent,
 

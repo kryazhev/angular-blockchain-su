@@ -2,9 +2,9 @@
 <div class="modal fade" id="langModal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">{{ 'translation.dialog.header' | i18n}}</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -14,7 +14,7 @@
         <p [innerHtml]="'translation.dialog.p3' | i18n | safe"></p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ 'action.close' | i18n}}</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">{{ 'action.close' | i18n}}</button>
       </div>
     </div>
   </div>

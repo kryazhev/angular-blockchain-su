@@ -1,0 +1,99 @@
+<div class="row mt-3">
+
+  <div class="col-12">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#description" role="tab" data-toggle="tab">
+          {{"project.tabs.description" | i18n}}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#data" role="tab" data-toggle="tab">
+          {{"project.tabs.data" | i18n}}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#tasks" role="tab" data-toggle="tab">
+          {{"project.tabs.tasks" | i18n}}
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content mt-3 mb-3">
+      <div role="tabpanel" class="tab-pane fade show active" id="description">
+        <div class="row">
+          <div class="col-12">
+            <app-alert [message]='"project.alert.not-implemented" | i18n'></app-alert>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <app-unit [base]="'project.ussr-2.0.challenge'" [parts]="'p1'"></app-unit>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-12 col-lg-4">
+                    <h5 class="mt-3">{{"project.ussr-2.0.proposal.header" | i18n}}</h5>
+                    <p>{{"project.ussr-2.0.proposal.p1" | i18n}}</p>
+                    <p>{{"project.ussr-2.0.proposal.p2" | i18n}}</p>
+                    <p>{{"project.ussr-2.0.proposal.p3" | i18n}}</p>
+                    <p>{{"project.ussr-2.0.proposal.p4" | i18n}}</p>
+                  </div>
+                  <div class="col-12 col-lg-8">
+                    <div class="embed-responsive embed-responsive-4by3">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XRlv-_uRhbY?rel=0"
+                        allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <app-unit [base]="'project.ussr-2.0.money'" [parts]="'p1,p2,p3'"></app-unit>
+              <div class="col-12">
+                <h5>{{"project.ussr-2.0.goal.header" | i18n}}</h5>
+                <p>{{"project.ussr-2.0.goal.p1" | i18n}}</p>
+                <div class="row">
+                  <div class="col-12 col-lg-9">
+                    <p>{{"project.ussr-2.0.goal.p2" | i18n}}</p>
+                    <p>{{"project.ussr-2.0.goal.p3" | i18n}}</p>
+                    <p>{{"project.ussr-2.0.goal.p4" | i18n}}</p>
+                    <p>{{"project.ussr-2.0.goal.p5" | i18n}}</p>
+                  </div>
+                  <div class="col-12 col-lg-3">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item" [innerHtml]="'project.gdp.china' | i18n | safe"></li>
+                      <li class="list-group-item" [innerHtml]="'project.gdp.usa' | i18n | safe"></li>
+                      <li class="list-group-item">...</li>
+                      <li class="list-group-item" [innerHtml]="'project.gdp.russia' | i18n | safe"></li>
+                      <li class="list-group-item">...</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <h5>{{"project.ussr-2.0.rules.header" | i18n}}</h5>
+                <p>{{"project.ussr-2.0.rules.p1" | i18n}}</p>
+                <ul>
+                  <li>{{"project.ussr-2.0.rules.p1.i1" | i18n}}</li>
+                  <li>{{"project.ussr-2.0.rules.p1.i2" | i18n}}</li>
+                  <li>{{"project.ussr-2.0.rules.p1.i3" | i18n}}</li>
+                  <li>{{"project.ussr-2.0.rules.p1.i4" | i18n}}</li>
+                  <li>{{"project.ussr-2.0.rules.p1.i5" | i18n}}</li>
+                  <li>{{"project.ussr-2.0.rules.p1.i6" | i18n}}</li>
+                  <li>{{"project.ussr-2.0.rules.p1.i7" | i18n}}
+                    <span class="badge badge-success">{{ "project.ussr-2.0.rules.p1.i7.badge" | i18n}}</span>
+                  </li>
+                </ul>
+              </div>
+              <app-unit [base]="'project.ussr-2.0.management'" [parts]="'p1,p2'"></app-unit>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="data">
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="tasks">
+      </div>
+    </div>
+  </div>
+
+</div>

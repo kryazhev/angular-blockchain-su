@@ -88,13 +88,13 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
-            <span class="flag-icon flag-icon-ru"></span>
+            <span class="flag-icon flag-icon-{{flag}}"></span>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarLanguages">
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+            <a class="dropdown-item" (click)='useLang("ru")'>
               <span class="flag-icon flag-icon-ru"></span> Pусский язык
             </a>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">
+            <a class="dropdown-item" (click)='useLang("en")'>
               <span class="flag-icon flag-icon-us"></span> English
             </a>
             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#langModal">

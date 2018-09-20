@@ -10,7 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { RestangularModule } from 'ngx-restangular';
-import { RestangularConfigFactory, DataService } from 'src/app/services/data.service';
+import { RestangularConfigFactory } from 'src/app/services/data.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -20,9 +20,13 @@ import { HomeComponent } from './components/home/home.component';
 import { ParticipantComponent } from './components/management/participant/participant.component';
 import { AssetComponent } from './components/management/asset/asset.component';
 import { HistorianRecordComponent } from './components/composer/historian-record/historian-record.component';
+import { I18nService } from './services/i18n.service';
+
+import { I18nPipe } from './i18n.pipe';
 
 @NgModule({
   declarations: [
+    I18nPipe,
 
     AppComponent,
 
@@ -49,7 +53,7 @@ import { HistorianRecordComponent } from './components/composer/historian-record
     AppRoutingModule,
     RestangularModule.forRoot(RestangularConfigFactory),
   ],
-  providers: [],
+  providers: [I18nService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,55 @@
+<div class="row mt-3">
+
+  <div class="col-12">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#description" role="tab" data-toggle="tab">
+          {{"project.tabs.description" | i18n}}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#data" role="tab" data-toggle="tab">
+          {{"project.tabs.data" | i18n}}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#tasks" role="tab" data-toggle="tab">
+          {{"project.tabs.tasks" | i18n}}
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content mt-3 mb-3">
+      <div role="tabpanel" class="tab-pane fade show active" id="description">
+        <div class="row">
+          <div class="col-12">
+            <app-alert [message]='"project.alert.not-implemented" | i18n'></app-alert>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12">
+                <h5>{{"project.bank.challenge.header" | i18n}}</h5>
+                <p>{{"project.bank.challenge.p1" | i18n}}</p>
+              </div>
+              <div class="col-12">
+                <h5>{{"project.bank.proposal.header" | i18n}}</h5>
+                <p>{{"project.bank.proposal.p1" | i18n}}</p>
+                <p>{{"project.bank.proposal.p2" | i18n}}</p>
+                <p>{{"project.bank.proposal.p3" | i18n}}</p>
+                <p>{{"project.bank.proposal.p4" | i18n}}</p>
+                <p>{{"project.bank.proposal.p5" | i18n}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="data">
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="tasks">
+      </div>
+    </div>
+  </div>
+
+</div>

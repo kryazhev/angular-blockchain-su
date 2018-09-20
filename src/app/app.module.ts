@@ -19,6 +19,10 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
+import { BankComponent } from './components/projects/bank/bank.component';
+
+import { AlertComponent } from './components/common/alert/alert.component';
+
 import { ParticipantComponent } from './components/management/participant/participant.component';
 import { AssetComponent } from './components/management/asset/asset.component';
 import { HistorianRecordComponent } from './components/composer/historian-record/historian-record.component';
@@ -35,10 +39,13 @@ import { SafePipe } from './pipes/safe.pipe';
     AppComponent,
 
     HeaderComponent,
+    AlertComponent,
 
     HomeComponent,
     AboutUsComponent,
     ContactUsComponent,
+
+    BankComponent,
 
     ParticipantComponent,
     AssetComponent,

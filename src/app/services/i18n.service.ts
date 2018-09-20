@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class I18nService {
 
-  lang = 'en';
+  lang = 'ru';
 
   messages = {
     'en': MESSAGES_EN,
@@ -28,7 +28,7 @@ const MESSAGES_RU = {
   'navigation.management': 'Управление',
   'navigation.management.participants': 'Участники',
   'navigation.management.assets': 'Активы',
-  'navigation.management.historian-records': 'Управление',
+  'navigation.management.historian-records': 'История операций',
   'navigation.about-us': 'О нас',
   'navigation.contact-us': 'Поддержка',
   'navigation.settings': 'Настройки',
@@ -137,6 +137,22 @@ const MESSAGES_RU = {
 
   // tslint:disable-next-line:max-line-length
   'contact-us.feedback.alert': 'Отправка почты на данный момент не работает, так как сервис отправки почты платный и пока он не подключен. Вы можете отправить письмо на адрес blockchain.ussr@gmail.com.',
+
+  'project.bank.challenge.header': 'Проблема',
+  // tslint:disable-next-line:max-line-length
+  'project.bank.challenge.p1': 'Банки это непрозрачные структуры. Периодические банкротства и последующие проблемы вкладчиков. Высокие проценты при переводе средств. Отсутствие программных возможностей (API) по управлению счетами.',
+
+  'project.bank.proposal.header': 'Общие рассуждения',
+  // tslint:disable-next-line:max-line-length
+  'project.bank.proposal.p1': 'Создание общественного банка даст возможность людям самим устанавливать правила игры. Конечно обычные банки не уйдут, так как необходимо полноценное обслуживание клиентов. Но для реализации очень большого числа других блокчейн сообществ необходим полноценный банк.',
+  // tslint:disable-next-line:max-line-length
+  'project.bank.proposal.p2': 'Должны быть доступны стандартные операции: пополнение счета, снятие средств со счета, межбанковские переводы. Все эти операции должны выполняться быстро, без комиссии (или с минимальной комиссией), с возможностью отмены операции.',
+  // tslint:disable-next-line:max-line-length
+  'project.bank.proposal.p3': 'Блокчейн банки могут стать полностью открытыми банками, или хотя бы намного более прозрачными. Такие банки могут дать гарантию вкладчикам, что средства не пропадут. Они должны стать отдельными структурами, а не "дополнительными" возможностями какого-нибудь закрытого банка. Открывая лишь небольшую часть, прозрачности не будет.',
+  // tslint:disable-next-line:max-line-length
+  'project.bank.proposal.p4': 'Банковская тайна, сокрытие информации о вкладчиках и прозрачность вступают в противоречие. Здесь еще большой вопрос, какая информация о деятельности банка будет доступна всем, а какая информация является частной и зашифрованной. При этом шифрование это не гарантия что данные не будут декодированы.',
+  // tslint:disable-next-line:max-line-length
+  'project.bank.proposal.p5': 'На пути создания таких общественных банков много вопросов. Первые “пилотные” версии могут содержать большое количество уязвимостей и проблем. Но движение в этом направлении уже нужно начинать. В идеале такие банки должны быть реализованы в рамках центральных банков. Это может уменьшить сопротивление коммерческих банков, а также послужить стимулом коммерческим банкам для интеграции с ними.',
 
   '': '',
 };
@@ -256,5 +272,22 @@ const MESSAGES_EN = {
 
   // tslint:disable-next-line:max-line-length
   'contact-us.feedback.alert': 'Email service is not enabled at the moment since it is paid so it is not connected yet. You can send an email to blockchain.ussr@gmail.com.',
+
+  'project.bank.challenge.header': 'Challenge',
+  // tslint:disable-next-line:max-line-length
+  'project.bank.challenge.p1': 'Today banks operations are non-transparent. Occasionally bank became a bankrupt that is followed by problems for clients. Money transfer fees are usually high. Software capabilities (API) for account management are absent.',
+
+  'project.bank.proposal.header': 'General reasoning',
+  // tslint:disable-next-line:max-line-length
+  'project.bank.proposal.p1': 'A public bank foundation will enable people to set the rules of the game by themselves. Certainly traditional banks will stay in place since full customer service is necessary and till the day a bigger number of blockchain communities a full-fledged bank will be required.',
+  // tslint:disable-next-line:max-line-length
+  'project.bank.proposal.p2': 'Standard bank operations should be available: account refill, withdrawal, interbank transfers. All these operations must be performed quickly, with no fees (or with a minimal fees), with an option to cancel the operation.',
+  // tslint:disable-next-line:max-line-length
+  'project.bank.proposal.p3': 'Blockchain banks could become fully open banks, or at least be much more transparent. Such banks can guarantee to clients that their funds will not be lost. They should become separate entities, not just an new division of any closed bank, transparency could not be achieved when only a small part of the operations will be revealed.',
+  // tslint:disable-next-line:max-line-length
+  'project.bank.proposal.p4': 'Bank secrecy act and transparency are conflicting and here is a big question: what information about the account activities should be available to everyone and what should be private and encrypted. However encryption does not guarantee that the data will not be eventually decoded.',
+  // tslint:disable-next-line:max-line-length
+  'project.bank.proposal.p5': 'A lot of questions should be answered prior to creation of such public banks. Initial "pilot" implementations could have a number of vulnerabilities and problems but first steps in this direction must be made. Best case scenario is to implement such public banks within the central banks because of this could reduce the back pressure of commercial banks and also serve as an incentive for others to integrate with it.',
+
   '': '',
 };

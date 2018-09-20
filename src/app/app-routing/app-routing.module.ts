@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from '../components/home/home.component';
+import { AboutUsComponent } from '../components/about-us/about-us.component';
 
 import { ParticipantComponent } from '../components/management/participant/participant.component';
 import { AssetComponent } from '../components/management/asset/asset.component';
@@ -12,7 +13,7 @@ import { HistorianRecordComponent } from '../components/composer/historian-recor
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'projects', component: HomeComponent},
-  { path: 'about-us', component: HomeComponent},
+  { path: 'about-us', component: AboutUsComponent},
   { path: 'contact-us', component: HomeComponent},
 
   { path: 'projects/management/participants', component: ParticipantComponent},

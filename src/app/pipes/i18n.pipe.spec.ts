@@ -1,5 +1,5 @@
 import { I18nPipe } from './i18n.pipe';
-import { I18nService } from './services/i18n.service';
+import { I18nService } from './../services/i18n.service';
 
 describe('I18nPipe', () => {
   it('create an instance', () => {

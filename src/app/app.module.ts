@@ -24,6 +24,7 @@ import { I18nService } from './services/i18n.service';
 
 import { I18nPipe } from './pipes/i18n.pipe';
 import { SafePipe } from './pipes/safe.pipe';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +36,12 @@ import { SafePipe } from './pipes/safe.pipe';
     HeaderComponent,
 
     HomeComponent,
+    AboutUsComponent,
 
     ParticipantComponent,
     AssetComponent,
 
     HistorianRecordComponent,
-
   ],
   imports: [
     BrowserModule,

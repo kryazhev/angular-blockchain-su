@@ -1,0 +1,69 @@
+<div class="row mt-3">
+
+  <div class="col-12">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#description" role="tab" data-toggle="tab">
+          {{"project.tabs.description" | i18n}}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#data" role="tab" data-toggle="tab">
+          {{"project.tabs.data" | i18n}}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#tasks" role="tab" data-toggle="tab">
+          {{"project.tabs.tasks" | i18n}}
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content mt-3 mb-3">
+      <div role="tabpanel" class="tab-pane fade show active" id="description">
+        <div class="row">
+          <app-unit [base]="'project.housing-cooperative.challenge'" [parts]="'p1'"></app-unit>
+          <app-unit [base]="'project.housing-cooperative.proposal'" [parts]="'p1'"></app-unit>
+          <app-unit [base]="'project.housing-cooperative.goal'" [parts]="'p1'"></app-unit>
+          <app-unit [base]="'project.housing-cooperative.rules'" [parts]="'p1,p2,p3,p4,p5,p6'"></app-unit>
+          <div class="col-12">
+            <h5>{{"project.housing-cooperative.overpayments.header" | i18n}}</h5>
+            <ol>
+              <li>{{"project.housing-cooperative.overpayments.i1" | i18n}}</li>
+              <li>{{"project.housing-cooperative.overpayments.i2" | i18n}}</li>
+              <li>{{"project.housing-cooperative.overpayments.i3" | i18n}}</li>
+            </ol>
+          </div>
+          <div class="col-12">
+            <h5>{{"project.housing-cooperative.participants.header" | i18n}}</h5>
+            <ol>
+              <li>{{"project.housing-cooperative.participants.i1" | i18n}}</li>
+              <li>{{"project.housing-cooperative.participants.i2" | i18n}}</li>
+              <li>{{"project.housing-cooperative.participants.i3" | i18n}}</li>
+            </ol>
+          </div>
+          <app-unit [base]="'project.housing-cooperative.withdraw-funds'" [parts]="'p1,p2,p3,p4'"></app-unit>
+          <app-unit [base]="'project.housing-cooperative.defaulter'" [parts]="'p1,p2,p3'"></app-unit>
+          <app-unit [base]="'project.housing-cooperative.about-us'" [parts]="'p1,p2,p3,p4,p5'"></app-unit>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="data">
+        <div class="align-self-center">
+          <a class="btn btn-block btn-outline-primary" href="#" data-toggle="modal" data-target="#loginModal">
+            <span class="fa fa-sign-in-alt fa-lg"></span> {{"action.login" | i18n}}
+          </a>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="tasks">
+        <ul>
+          <li>Добавить перевод пользовательского интерфейса на другие языки.</li>
+          <li>Проработать проект на соотвествие законов РФ: регистрация кооператива, устав, открытие счетов, налоговая.</li>
+          <li>Проработать проект на соотвествие законов РК: регистрация кооператива, устав, открытие счетов, налоговая.</li>
+          <li>Найти людей, которые согласились бы взяться за реализацию проекта на территории: Белоруссии, Грузии,
+            Украины и т.д.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

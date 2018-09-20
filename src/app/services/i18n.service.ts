@@ -234,6 +234,77 @@ const MESSAGES_RU = {
   // tslint:disable-next-line:max-line-length
   'project.ussr-2.0.management.p2': 'Несмотря на то, сколько негатива и критики было на советское руководство, именно здесь были примеры руководителей, которые думали не о собственном благополучии, а о чем то - большем. Именно таких руководителей нам и нужно среди членов общества выделять и поддерживать.',
 
+  'project.housing-cooperative.challenge.header': 'Проблема',
+  'project.housing-cooperative.challenge.p1': 'Высокий процент ипотечного кредитования, который в любой момент может быть увеличен.',
+
+  'project.housing-cooperative.proposal.header': 'Общие рассуждения',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.proposal.p1': 'Необходим альтернативой механизм для приобретения недвижимости. Наличие такого общественного механизма должно послужить стимулом коммерческим банкам уменьшить ставку до уровня 1-2%%. Данный механизм должен быть устойчивым, и работать на протяжении десятилетий.',
+
+  'project.housing-cooperative.goal.header': 'Цель проекта',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.goal.p1': 'Создание кооператива по приобретению жилья. Данный кооператив будет с полностью открытой бухгалтерией, все внутренние операции и документация будут общедоступны. Правила работы будут максимально прозрачны. Работу кооператива нужно максимально автоматизировать. На текущий момент полной автоматизации мы добьемся, но в идеале, к этому нужно стремиться.',
+
+  'project.housing-cooperative.rules.header': 'Приципы работы кооператива',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.rules.p1': 'Мы открываем кооперативный счет. На этом счету мы будем накапливать деньги для приобретения жилья.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.rules.p2': 'Участником кооператива может стать любой. Участник определяется со стоимостью жилья и сроком, за который он обязуется погасить задолженность. Далее участник вносит 1/3 от стоимости на кооперативный счет и становится в очередь.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.rules.p3': 'При накоплении на счету необходимой суммы кооператив приобретает жилье первому участнику в очереди. После этого участник кооператива начинает ежемесячно погашать свою задолженность.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.rules.p4': 'Недвижимость приобретается на кооператив. Это является стимулом для участника погашать перед кооперативом свою задолженность. Сам участник является обременителем (схема обратная банковской ипотеке) это гарантия того, что основатели кооператива не продадут все квартиры и не уедут в неизвестном направлении.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.rules.p5': 'После того как участник вернет свою задолженность перед кооперативом документы переоформляются и участник кооператива становится полноправным собственником. На этом участие в кооперативе прекращается.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.rules.p6': 'Каждый участник платит ежемесячные кооперативные взносы 1000 рублей в месяц. Членские взносы человек начинает платить только с того момента как на него приобретается жилье. Оплата членских взносов заканчивается, когда участник погашает свою задолженность перед кооперативом.',
+
+  'project.housing-cooperative.overpayments.header': 'Ваша переплата',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.overpayments.i1': 'Банковские переводы 2%%. Возможно мы найдем способы переводов без комиссии, или с меньшей комиссией.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.overpayments.i2': 'Оформление документов ~50 000 рублей. Все расходы по оформлению будут на вас. Сотрудник кооператива должен будет приехать и оформить сделку. В начале нашего кооператива это будет поездка в другой город. С ростом нашего сообщества, сотрудники будут появляться в различных городах. Также сюда можно отнести обязательное страхование недвижимости.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.overpayments.i3': 'Членские взносы 1000 рублей в месяц. Итого за 10 лет общая сумма переплаты 120 000 рублей. Данные деньги пойдут на расходы связанные с поддержкой и развитием кооператива.',
+
+  'project.housing-cooperative.participants.header': 'Требования к участникам',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.participants.i1': 'Нам не нужно знать ваше ФИО. Но так как все документы по кооперативу будут в общем доступе, то ваше имя будет "засвечено" при оформлении документов.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.participants.i2': 'Нам не нужны справки НДФЛ. Нам неважно, где и кем вы работаете (обычно банки не дают ипотеку ИП). Но вы должны ответственно подойти к определению стоимости приобретаемой недвижимости. Ваши ежемесячные платежи должны быть для вас реальны.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.participants.i3': 'Нам неважно ваше гражданство для участия в кооперативе. Но гражданство у вас должно быть на момент когда вы рассчитаетесь, и недвижимость будет переоформляться на вас.',
+
+  'project.housing-cooperative.withdraw-funds.header': 'Вывод средств из кооператива',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.withdraw-funds.p1': 'Вы в любой момент можете оформить заявку на выход или частичный вывод средств из кооператива.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.withdraw-funds.p2': 'Заявки на вывод это тоже очередь, но они имеют наивысший приоритет. При накоплении на кооперативном счете необходимой суммы, такая заявка будет в порядке очереди обработана.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.withdraw-funds.p3': 'Если недвижимость вам еще не была приобретена, то ваши потери составят 4%% (два банковских перевода).',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.withdraw-funds.p4': 'Если недвижимость уже была приобретена, то недвижимость продается по рыночной стоимости, из этой суммы погашается долг перед кооперативом, а остальная часть возвращается бывшему участнику. При этом участник может, как заработать, так и потерять, в зависимости от ситуации на рынке жилья.',
+
+  'project.housing-cooperative.defaulter.header': 'Неплательщики',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.defaulter.p1': 'Мы постарались создать прозрачную и выгодную для всех схему. Честное участие в нашей схеме выгодно, и переплата по сравнению с другими совсем небольшая.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.defaulter.p2': 'Если участник согласен на мирное урегулирование то недвижимость продается по рыночной стоимости, из этой суммы погашается долг перед кооперативом, а остальная часть возвращается бывшему участнику. При этом участник может, как заработать, так и потерять, в зависимости от ситуации на рынке жилья.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.defaulter.p3': 'Если участник на мирное урегулирование не согласен, то дальше разбирательство идет через суд. Несмотря на то, что это долго и больно, другого выхода у нас нет.',
+
+  'project.housing-cooperative.about-us.header': 'Мы пирамида',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.about-us.p1': 'В основе деятельности нашего кооператива лежит пирамидальный принцип. Жилье приобретается за счет поступления новых членов. Мы исходим из того что пирамида это не обязательно плохо. Все зависит от основателей и насколько их намерения являются мошенническими. Главное чтобы пирамида была устойчивой.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.about-us.p2': 'Активами нашего кооператива являются: приобретённая недвижимость, средства на кооперативном счете. Если продать всю недвижимость, то мы получим сумму (за исключением %% при переводе), которую внесли наши участники. В этом случае мы можем разойтись и каждый останется при своих. Мы не сможем возместить только членские взносы, так как эти деньги уже будут потрачены на развитие кооператива.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.about-us.p3': 'Гарантии, которые мы можем вам предложить. Наша бухгалтерская книга будет полностью открыта, для этого мы используем технологию блокчейн. Мы будем принимать переводы с пластиковых карт Visa\MasterCard, которые позволяют оформить процедуру возврата (chargeback), в том случае, если вы посчитаете работу нашего кооператива мошенничеством.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.about-us.p4': 'На данном этапе у проекта нет инвестора и врядли он появится. Инвестиции под нулевой или минусовой процент коммерчески неинтересны. Другие проекты, такие как: "Общественный пенсионный фонд", "Сообщество советских людей" могли бы стать инвесторами в наш кооператив. Но пока деньги которые у нас будут это только деньги наших участников.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.about-us.p5': 'Данный проект это очередь, и вам придется ждать момент наступления вашей очереди. Все будет зависеть от количества участников в нашем сообществе.',
+
   '': '',
 };
 
@@ -448,6 +519,76 @@ const MESSAGES_EN = {
   'project.ussr-2.0.management.p1': 'To implement projects we need managers. People make decisions having their own interests in mind. Fighting corruption is worthless, it is impossible to fight human nature.',
   // tslint:disable-next-line:max-line-length
   'project.ussr-2.0.management.p2': 'Soviet leadership was a good example of a top-ranked managers who did not think just about their own well-being but about something more, despite of how much negativity and criticism was about it. That type of leaders is what we need to find denote and support.',
+
+  'project.housing-cooperative.challenge.header': 'Challenge',
+  'project.housing-cooperative.challenge.p1': 'High mortgage annual percentage rate that can be raised at any time',
+
+  'project.housing-cooperative.proposal.header': 'General thoughts',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.proposal.p1': 'An alternative mechanism for real estate acquisition is needed. The existence of such a public mechanism should serve as a motivation for commercial banks to reduce an effective APR to 1-2 %%. This mechanism should be sustainable, and work for decades.',
+
+  'project.housing-cooperative.goal.header': 'Project goal',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.goal.p1': 'Foundation of a cooperative for the real estate acquisition. This cooperative will be with open accounting: all internal operations and documentation will be publicly available. Operational principles will be as transparent as possible. The cooperative functions should be automated as much as possible. We might not be able to implement it 100 percent right away but this is a goal to achieve.',
+
+  'project.housing-cooperative.rules.header': 'Cooperative operation principles',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.rules.p1': 'We open a cooperative account and on this account we will accumulate money for the purchase of housing.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.rules.p2': 'Anyone can participate in the cooperative. The participant is determined with the real estate cost and the period for which he undertakes to pay off the debt. Further on, the participant contributes 1/3 of the cost to the cooperative account and joins the queue.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.rules.p3': 'When you accumulate the required amount on the account, the acquires a real estate to the first participant in the queue. After that, the participant of the cooperative begins to repay its debts on a monthly basis.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.rules.p4': 'Cooperative takes the ownership over the property. This stimulate the participant to repay his debt to the cooperative. The participant himself is an encumbrancer (a scheme reverse to a bank mortgage) and this prevents cooperative founders from selling acquired property and leave in an unknown direction.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.rules.p5': 'When participant repays his debt to the cooperative he becomes a property legal owner and it ends participation in the cooperative.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.rules.p6': 'Each participant makes monthly cooperative contributions of 1000 rubles. Co-op member starts to pay contribution fee since the moment he acquires a housing. Member stop paying fees when he repays a debt to the cooperative.',
+
+  'project.housing-cooperative.overpayments.header': 'Loan cost',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.overpayments.i1': 'Bank transfer fee is 2 %%. Perhaps we’ll find a way to transfer without fees, or to reduce it.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.overpayments.i2': 'Documents fee - about 50 000 rubles. All document fees will be on you. An employee of the cooperative will have to come and settle the deal. In the beginning of our cooperative it might require a trip to another city, with the growth of our community, employees will appear in different cities. Also you can include in costs mandatory real estate insurance.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.overpayments.i3': 'Membership fees are 1000 rubles per month. Total for 10 years, the total fee paid is 120,000 rubles. Those funds are intended for support and development of the cooperative operations.',
+
+  'project.housing-cooperative.participants.header': 'Participant requirements',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.participants.i1': 'We do not need to know your legal name. But since all documents on the cooperative will be in the public domain, your name will be exposed during documentation.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.participants.i2': 'We do not need personal income tax forms. We do not care where do you work and your role (banks might not give a mortgage to Sole Proprietors). But you must take a responsible approach to determining the value of the property you are purchasing. Your monthly payments should be reasonable for you.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.participants.i3': 'We do not care about your citizenship to participate in the cooperative. But you have to be a citizen at the time when you pay off in order for take real estate ownership.',
+
+  'project.housing-cooperative.withdraw-funds.header': 'Withdrawal from the cooperative',
+  'project.housing-cooperative.withdraw-funds.p1': 'You can apply to full or partial funds withdraw from the cooperative at any time.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.withdraw-funds.p2': 'Withdraw application is also a queue but the difference is they have a higher priority. When cooperative account accumulates necessary amount this application will be processed in the order of the queue.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.withdraw-funds.p3': 'If the property has not yet been purchased, then your losses will be 4 %% (two bank transfers).',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.withdraw-funds.p4': 'If the property had already been acquired, then it will sold at market price, this amount repays the debt to the cooperative, and the rest is returned to the former participant. In this case a participant can earn or lose depending on the housing market situation.',
+
+  'project.housing-cooperative.defaulter.header': 'Non payers',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.defaulter.p1': 'We’re trying to create a transparent and beneficial scheme for everyone. Honest participation in our scheme is advantageous and overpayment is quite small when compared to others.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.defaulter.p2': 'If a participant agrees to a peaceful default adjustment then the property is sold at market value, this debt is repaid to the cooperative, and the rest is returned to the former participant. In this case a participant can both earn or lose depending on the housing market situation.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.defaulter.p3': 'If a participant does not agree to a peaceful default adjustment then the proceeding goes through the court. Despite the fact that it is long and painful, we have no other way out.',
+
+  'project.housing-cooperative.about-us.header': 'We are a pyramid',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.about-us.p1': 'Pyramid principle lies behind our cooperative\'s business. Housing is acquired because of new members are coming in. We proceed from the fact that the pyramid is not always bad it all depends on the founders will and how honest their intentions are. The main thing is that the pyramid is stable.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.about-us.p2': 'Main assets of our cooperative are acquired real estate and funds on the cooperative account. If we sell all the property we own we will get the amount (except for the transfer fees) funded by our members. In this case, we can spread out and everyone will get their own. Only thing we’ll not be able to refund is membership fee since those funds already spent on the cooperative operation and development.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.about-us.p3': 'Guarantees that we can offer you: our accounting book will be fully open - blockchain technology used for it. We will accept card transfers from Visa / MasterCard which allow you to issue a chargeback procedure in case you consider the work of our cooperative as fraud.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.about-us.p4': 'At this moment our project does not have an investor and it is unlikely that it will come in. Investments for zero or negative percent are not attractive. Another projects, such as: "Public Pension Fund", "Community of Soviet People" could become investors in our cooperative. But for now the money we have will only be the money of our participants.',
+  // tslint:disable-next-line:max-line-length
+  'project.housing-cooperative.about-us.p5': 'This project in nature is a queue, and you have to wait for the moment of your turn. Everything will depend on the number of participants in our community.',
 
   '': '',
 };

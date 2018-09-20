@@ -7,6 +7,7 @@ import { HomeComponent } from '../components/home/home.component';
 import { AboutUsComponent } from '../components/about-us/about-us.component';
 import { ContactUsComponent } from '../components/contact-us/contact-us.component';
 
+import { HousingCooperativeComponent } from '../components/projects/housing-cooperative/housing-cooperative.component';
 import { UssrComponent } from '../components/projects/ussr/ussr.component';
 import { PensionFundComponent } from '../components/projects/pension-fund/pension-fund.component';
 import { MunicipalServicesComponent } from '../components/projects/municipal-services/municipal-services.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent},
   { path: 'contact-us', component: ContactUsComponent},
 
+  { path: 'projects/housing-cooperative', component: HousingCooperativeComponent},
   { path: 'projects/ussr-2.0', component: UssrComponent},
   { path: 'projects/pension-fund', component: PensionFundComponent},
   { path: 'projects/municipal-services', component: MunicipalServicesComponent},

@@ -154,6 +154,15 @@ const MESSAGES_RU = {
   // tslint:disable-next-line:max-line-length
   'project.bank.proposal.p5': 'На пути создания таких общественных банков много вопросов. Первые “пилотные” версии могут содержать большое количество уязвимостей и проблем. Но движение в этом направлении уже нужно начинать. В идеале такие банки должны быть реализованы в рамках центральных банков. Это может уменьшить сопротивление коммерческих банков, а также послужить стимулом коммерческим банкам для интеграции с ними.',
 
+  'project.municipal-services.challenge.header': 'Проблема',
+  'project.municipal-services.challenge.p1': 'Жилищно коммунальное хозяйство это одна из самых болезненных тем для нашего общества.',
+
+  'project.municipal-services.proposal.header': 'Общие рассуждения',
+  // tslint:disable-next-line:max-line-length
+  'project.municipal-services.proposal.p1': 'Очень большую пользу в этой области могла бы принести технология блокчейн. Создание системы с полностью открытой бухгалтерией, а также прозрачной системой голосования, позволило бы вывести качество управления на новый уровень.',
+  // tslint:disable-next-line:max-line-length
+  'project.municipal-services.proposal.p2': 'Для начала создать площадку, в которой просто собрать интересные идеи и начать общественное обсуждение. С дальнейшей реализацией наиболее интересных идей.',
+
   '': '',
 };
 
@@ -288,6 +297,15 @@ const MESSAGES_EN = {
   'project.bank.proposal.p4': 'Bank secrecy act and transparency are conflicting and here is a big question: what information about the account activities should be available to everyone and what should be private and encrypted. However encryption does not guarantee that the data will not be eventually decoded.',
   // tslint:disable-next-line:max-line-length
   'project.bank.proposal.p5': 'A lot of questions should be answered prior to creation of such public banks. Initial "pilot" implementations could have a number of vulnerabilities and problems but first steps in this direction must be made. Best case scenario is to implement such public banks within the central banks because of this could reduce the back pressure of commercial banks and also serve as an incentive for others to integrate with it.',
+
+  'project.municipal-services.challenge.header': 'Challenge',
+  'project.municipal-services.challenge.p1': 'Housing services and management are ones of the hottest and hardest topics for our society.',
+
+  'project.municipal-services.proposal.header': 'General reasoning',
+  // tslint:disable-next-line:max-line-length
+  'project.municipal-services.proposal.p1': 'Blockchain technology has a great potential to revolutionize those services. Management system with a fully open accounting and transparent voting system would bring a service quality to a new heights.',
+  // tslint:disable-next-line:max-line-length
+  'project.municipal-services.proposal.p2': 'As a starting point - create a platform aimed to collect interesting ideas and start a public discussions. Further implementation of the best ones should follow.',
 
   '': '',
 };

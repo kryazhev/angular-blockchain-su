@@ -12,6 +12,7 @@ import { BankComponent } from '../components/projects/bank/bank.component';
 import { ParticipantComponent } from '../components/management/participant/participant.component';
 import { AssetComponent } from '../components/management/asset/asset.component';
 import { HistorianRecordComponent } from '../components/composer/historian-record/historian-record.component';
+import { MunicipalServicesComponent } from '../components/projects/municipal-services/municipal-services.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent},
   { path: 'contact-us', component: ContactUsComponent},
 
+  { path: 'projects/municipal-services', component: MunicipalServicesComponent},
   { path: 'projects/bank', component: BankComponent},
 
   { path: 'projects/management/participants', component: ParticipantComponent},

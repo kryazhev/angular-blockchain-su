@@ -27,18 +27,19 @@
           </div>
           <div class="col-12">
             <div class="row">
-              <app-unit [base]="'project.pension-fund.challenge'" [parts]="'p1'"></app-unit>
+
               <div class="col-12">
-                <h5 class="mt-3">{{"project.pension-fund.proposal.header" | i18n}}</h5>
+                <h5>{{'project.pension-fund.challenge.header' | i18n}}</h5>
+                <p>{{'project.pension-fund.challenge.p1' | i18n}}</p>
+              </div>
+
+              <div class="col-12">
+                <h5>{{"project.pension-fund.proposal.header" | i18n}}</h5>
                 <p>{{"project.pension-fund.proposal.p1" | i18n}}</p>
-                <ul>
-                  <li>{{"project.pension-fund.proposal.p1.i1" | i18n}}</li>
-                  <li>{{"project.pension-fund.proposal.p1.i2" | i18n}}</li>
-                  <li>{{"project.pension-fund.proposal.p1.i3" | i18n}}</li>
-                  <li [innerHtml]='"project.pension-fund.proposal.p1.i4" | i18n | safe'></li>
-                </ul>
+                <app-unit-ul [base]="'project.pension-fund.proposal.p1'" [parts]="'i1,i2,i3,i4'"></app-unit-ul>
                 <p>{{"project.pension-fund.proposal.p2" | i18n}}</p>
               </div>
+
             </div>
           </div>
         </div>

@@ -7,14 +7,24 @@
   </div>
 </header>
 <div class="row">
-  <app-unit [base]="'home.motivation'" [parts]="'p1'"></app-unit>
 
-  <app-unit [base]="'home.principles'" [parts]="'p1,p2'"></app-unit>
+  <div class="col-12 mt-3">
+    <h3>{{'home.motivation.header' | i18n}}</h3>
+    <p>{{'home.motivation.p1' | i18n}}</p>
+  </div>
 
-  <app-unit [base]="'home.goal'" [parts]="'p1,p2,p3'"></app-unit>
+  <div class="col-12 mt-3">
+    <h3>{{'home.principles.header' | i18n}}</h3>
+    <app-unit-p [base]="'home.principles'" [parts]="'p1,p2'"></app-unit-p>
+  </div>
 
-  <div class="col-12">
-    <h5>{{"home.technologies.header" | i18n}}</h5>
+  <div class="col-12 mt-3">
+    <h3>{{'home.goal.header' | i18n}}</h3>
+    <app-unit-p [base]="'home.goal'" [parts]="'p1,p2,p3'"></app-unit-p>
+  </div>
+
+  <div class="col-12 mt-3">
+    <h3>{{"home.technologies.header" | i18n}}</h3>
     <p>
       <span id="blockchain-term" class="font-weight-bold">
         {{"home.technologies.blockchain.term" | i18n}}
@@ -47,10 +57,13 @@
     </div>
   </div>
 
-  <app-unit [base]="'home.management'" [parts]="'p1'"></app-unit>
+  <div class="col-12 mt-3">
+    <h3>{{'home.management.header' | i18n}}</h3>
+    <p>{{'home.management.p1' | i18n}}</p>
+  </div>
 
-  <div class="col-12">
-    <h5 id="projects">{{"home.projects.header" | i18n}}</h5>
+  <div class="col-12 mt-3">
+    <h3 id="projects">{{"home.projects.header" | i18n}}</h3>
   </div>
 
   <div class="col-lg-4 col-sm-12 mb-3">
@@ -71,7 +84,9 @@
   <div class="col-lg-4 col-sm-12 mb-3">
     <div class="card border-primary h-100">
       <div class="card-body">
-        <h5 class="card-title"><span class="fa fa-dove fa-lg"></span> {{"home.projects.ussr-2.0.header" | i18n}}</h5>
+        <h5 class="card-title">
+          <span class="fa fa-dove fa-lg"></span> {{"home.projects.ussr-2.0.header" | i18n}}
+        </h5>
         <p class="card-text">{{"home.projects.ussr-2.0.description" | i18n}}</p>
       </div>
       <div class="card-footer">
@@ -84,7 +99,9 @@
   <div class="col-lg-4 col-sm-12 mb-3">
     <div class="card border-primary h-100">
       <div class="card-body">
-        <h5 class="card-title"><span class="fa fa-blind fa-lg"></span> {{"home.projects.pension-fund.header" | i18n}}</h5>
+        <h5 class="card-title">
+          <span class="fa fa-blind fa-lg"></span> {{"home.projects.pension-fund.header" | i18n}}
+        </h5>
         <p class="card-text">{{"home.projects.pension-fund.description" | i18n}}</p>
       </div>
       <div class="card-footer">
@@ -97,8 +114,9 @@
   <div class="col-lg-4 col-sm-12 mb-3">
     <div class="card border-primary h-100">
       <div class="card-body">
-        <h5 class="card-title"><span class="fa fa-clipboard-list fa-lg"></span>
-          {{"home.projects.municipal-services.header" | i18n}}</h5>
+        <h5 class="card-title">
+          <span class="fa fa-clipboard-list fa-lg"></span> {{"home.projects.municipal-services.header" | i18n}}
+        </h5>
         <p class="card-text">{{"home.projects.municipal-services.description" | i18n}}</p>
       </div>
       <div class="card-footer">
@@ -111,7 +129,9 @@
   <div class="col-lg-4 col-sm-12 mb-3">
     <div class="card border-primary h-100">
       <div class="card-body">
-        <h5 class="card-title"><span class="fa fa-piggy-bank fa-lg"></span> {{"home.projects.bank.header" | i18n}}</h5>
+        <h5 class="card-title">
+          <span class="fa fa-piggy-bank fa-lg"></span> {{"home.projects.bank.header" | i18n}}
+        </h5>
         <p class="card-text">{{"home.projects.bank.description" | i18n}}</p>
       </div>
       <div class="card-footer">
@@ -133,14 +153,10 @@
   </div>
 
   <div class="col-12 mt-3">
-    <h5>{{"home.introduction.header" | i18n}}</h5>
+    <h3>{{"home.introduction.header" | i18n}}</h3>
     <div class="row">
       <div class="col-lg-4 col-12">
-        <p>{{"home.introduction.p1" | i18n}}</p>
-        <p>{{"home.introduction.p2" | i18n}}</p>
-        <p>{{"home.introduction.p3" | i18n}}</p>
-        <p>{{"home.introduction.p4" | i18n}}</p>
-        <p>{{"home.introduction.p5" | i18n}}</p>
+        <app-unit-p [base]="'home.introduction'" [parts]="'p1,p2,p3,p4,p5'"></app-unit-p>
       </div>
       <div class="col-lg-8 col-12">
         <div class="embed-responsive embed-responsive-4by3">
@@ -150,5 +166,9 @@
     </div>
   </div>
 
-  <app-unit [base]="'home.investment'" [parts]="'p1,p2,p3'"></app-unit>
+  <div class="col-12 mt-3">
+    <h3>{{'home.investment.header' | i18n}}</h3>
+    <app-unit-p [base]="'home.investment'" [parts]="'p1,p2,p3'"></app-unit-p>
+  </div>
+
 </div>

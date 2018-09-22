@@ -26,7 +26,9 @@ import { MunicipalServicesComponent } from './components/projects/municipal-serv
 import { BankComponent } from './components/projects/bank/bank.component';
 
 import { AlertComponent } from './components/common/alert/alert.component';
-import { UnitComponent } from './components/common/unit/unit.component';
+import { UnitPComponent } from './components/common/units/unit-p/unit-p.component';
+import { UnitUlComponent } from './components/common/units/unit-ul/unit-ul.component';
+import { UnitOlComponent } from './components/common/units/unit-ol/unit-ol.component';
 
 import { ParticipantComponent } from './components/management/participant/participant.component';
 import { AssetComponent } from './components/management/asset/asset.component';
@@ -45,7 +47,9 @@ import { SafePipe } from './pipes/safe.pipe';
 
     HeaderComponent,
     AlertComponent,
-    UnitComponent,
+    UnitPComponent,
+    UnitUlComponent,
+    UnitOlComponent,
 
     HomeComponent,
     AboutUsComponent,

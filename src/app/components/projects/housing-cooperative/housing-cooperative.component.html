@@ -21,29 +21,52 @@
     <div class="tab-content mt-3 mb-3">
       <div role="tabpanel" class="tab-pane fade show active" id="description">
         <div class="row">
-          <app-unit [base]="'project.housing-cooperative.challenge'" [parts]="'p1'"></app-unit>
-          <app-unit [base]="'project.housing-cooperative.proposal'" [parts]="'p1'"></app-unit>
-          <app-unit [base]="'project.housing-cooperative.goal'" [parts]="'p1'"></app-unit>
-          <app-unit [base]="'project.housing-cooperative.rules'" [parts]="'p1,p2,p3,p4,p5,p6'"></app-unit>
+
+          <div class="col-12">
+            <h5>{{'project.housing-cooperative.challenge.header' | i18n}}</h5>
+            <p>{{'project.housing-cooperative.challenge.p1' | i18n}}</p>
+          </div>
+
+          <div class="col-12">
+            <h5>{{'project.housing-cooperative.proposal.header' | i18n}}</h5>
+            <p>{{'project.housing-cooperative.proposal.p1' | i18n}}</p>
+          </div>
+
+          <div class="col-12">
+            <h5>{{'project.housing-cooperative.goal.header' | i18n}}</h5>
+            <p>{{'project.housing-cooperative.goal.p1' | i18n}}</p>
+          </div>
+
+          <div class="col-12">
+            <h5>{{'project.housing-cooperative.goal.header' | i18n}}</h5>
+            <app-unit-p [base]="'project.housing-cooperative.rules'" [parts]="'p1,p2,p3,p4,p5,p6'"></app-unit-p>
+          </div>
+
           <div class="col-12">
             <h5>{{"project.housing-cooperative.overpayments.header" | i18n}}</h5>
-            <ol>
-              <li>{{"project.housing-cooperative.overpayments.i1" | i18n}}</li>
-              <li>{{"project.housing-cooperative.overpayments.i2" | i18n}}</li>
-              <li>{{"project.housing-cooperative.overpayments.i3" | i18n}}</li>
-            </ol>
+            <app-unit-ol [base]="'project.housing-cooperative.overpayments'" [parts]="'i1,i2,i3'"></app-unit-ol>
           </div>
+
           <div class="col-12">
             <h5>{{"project.housing-cooperative.participants.header" | i18n}}</h5>
-            <ol>
-              <li>{{"project.housing-cooperative.participants.i1" | i18n}}</li>
-              <li>{{"project.housing-cooperative.participants.i2" | i18n}}</li>
-              <li>{{"project.housing-cooperative.participants.i3" | i18n}}</li>
-            </ol>
+            <app-unit-ul [base]="'project.housing-cooperative.participants'" [parts]="'i1,i2,i3'"></app-unit-ul>
           </div>
-          <app-unit [base]="'project.housing-cooperative.withdraw-funds'" [parts]="'p1,p2,p3,p4'"></app-unit>
-          <app-unit [base]="'project.housing-cooperative.defaulter'" [parts]="'p1,p2,p3'"></app-unit>
-          <app-unit [base]="'project.housing-cooperative.about-us'" [parts]="'p1,p2,p3,p4,p5'"></app-unit>
+
+          <div class="col-12">
+            <h5>{{'project.housing-cooperative.withdraw-funds.header' | i18n}}</h5>
+            <app-unit-p [base]="'project.housing-cooperative.withdraw-funds'" [parts]="'p1,p2,p3,p4'"></app-unit-p>
+          </div>
+
+          <div class="col-12">
+            <h5>{{'project.housing-cooperative.defaulter.header' | i18n}}</h5>
+            <app-unit-p [base]="'project.housing-cooperative.defaulter'" [parts]="'p1,p2,p3'"></app-unit-p>
+          </div>
+
+          <div class="col-12">
+            <h5>{{'project.housing-cooperative.about-us.header' | i18n}}</h5>
+            <app-unit-p [base]="'project.housing-cooperative.about-us'" [parts]="'p1,p2,p3,p4,p5'"></app-unit-p>
+          </div>
+
         </div>
       </div>
 

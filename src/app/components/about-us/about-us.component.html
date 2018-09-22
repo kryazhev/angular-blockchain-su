@@ -18,9 +18,16 @@
     </div>
   </div>
 
-  <app-unit [base]="'about-us.about-me'" [parts]="'p1'"></app-unit>
+  <div class="col-12 mt-3">
+    <h5>{{'about-us.about-me.header' | i18n}}</h5>
+    <p>{{'about-us.about-me.p1' | i18n}}</p>
+  </div>
 
-  <app-unit [base]="'about-us.genesis'" [parts]="'p1'"></app-unit>
+  <div class="col-12 mt-3">
+    <h5>{{'about-us.genesis.header' | i18n}}</h5>
+    <p>{{'about-us.genesis.p1' | i18n}}</p>
+  </div>
+
   <div class="col-12 mb-3">
     <div class="card card-body bg-light shadow">
       <blockquote class="blockquote">
@@ -29,9 +36,15 @@
       </blockquote>
     </div>
   </div>
-  <app-unit [base]="'about-us.genesis'" [parts]="'p2,p3'" [withHeader]="false"></app-unit>
+  <div class="col-12 mt-3">
+    <app-unit-p [base]="'about-us.genesis'" [parts]="'p2,p3'"></app-unit-p>
+  </div>
 
-  <app-unit [base]="'about-us.goal'" [parts]="'p1'"></app-unit>
+  <div class="col-12 mt-3">
+    <h5>{{'about-us.goal.header' | i18n}}</h5>
+    <p>{{'about-us.goal.p1' | i18n}}</p>
+  </div>
+
   <div class="col-12 mb-3">
     <div class="card card-body bg-light shadow">
       <blockquote class="blockquote">
@@ -40,7 +53,9 @@
       </blockquote>
     </div>
   </div>
-  <app-unit [base]="'about-us.goal'" [parts]="'p2'" [withHeader]="false"></app-unit>
+  <div class="col-12">
+    <app-unit-p [base]="'about-us.goal'" [parts]="'p2'"></app-unit-p>
+  </div>
   <div class="col-12 mb-3">
     <div class="card card-body bg-light shadow">
       <blockquote class="blockquote">
@@ -49,9 +64,14 @@
       </blockquote>
     </div>
   </div>
-  <app-unit [base]="'about-us.goal'" [parts]="'p3,p4'" [withHeader]="false"></app-unit>
+  <div class="col-12">
+    <app-unit-p [base]="'about-us.goal'" [parts]="'p3,p4'"></app-unit-p>
+  </div>
 
-  <app-unit [base]="'about-us.conclusion'" [parts]="'p1'"></app-unit>
+  <div class="col-12 mt-3">
+    <h5>{{'about-us.conclusion.header' | i18n}}</h5>
+    <p>{{'about-us.conclusion.p1' | i18n}}</p>
+  </div>
   <div class="col-12 mb-3">
     <div class="card card-body bg-light shadow">
       <blockquote class="blockquote">
@@ -60,6 +80,8 @@
       </blockquote>
     </div>
   </div>
-  <app-unit [base]="'about-us.conclusion'" [parts]="'p2,p3'" [withHeader]="false"></app-unit>
+  <div class="col-12">
+    <app-unit-p [base]="'about-us.conclusion'" [parts]="'p2,p3'"></app-unit-p>
+  </div>
 
 </div>

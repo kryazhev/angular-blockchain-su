@@ -27,8 +27,17 @@
           </div>
           <div class="col-12">
             <div class="row">
-              <app-unit [base]="'project.bank.challenge'" [parts]="'p1'"></app-unit>
-              <app-unit [base]="'project.bank.proposal'" [parts]="'p1,p2,p3,p4,p5'"></app-unit>
+
+              <div class="col-12">
+                <h5>{{'project.bank.challenge.header' | i18n}}</h5>
+                <p>{{'project.bank.challenge.p1' | i18n}}</p>
+              </div>
+
+              <div class="col-12">
+                <h5>{{'project.bank.proposal.header' | i18n}}</h5>
+                <app-unit-p [base]="'project.bank.proposal'" [parts]="'p1,p2,p3,p4,p5'"></app-unit-p>
+              </div>
+
             </div>
           </div>
         </div>

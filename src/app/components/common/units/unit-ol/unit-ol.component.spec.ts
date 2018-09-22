@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UnitComponent } from './unit.component';
+import { UnitOlComponent } from './unit-ol.component';
 
-describe('UnitComponent', () => {
-  let component: UnitComponent;
-  let fixture: ComponentFixture<UnitComponent>;
+describe('UnitOlComponent', () => {
+  let component: UnitOlComponent;
+  let fixture: ComponentFixture<UnitOlComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UnitComponent ]
+      declarations: [ UnitOlComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UnitComponent);
+    fixture = TestBed.createComponent(UnitOlComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

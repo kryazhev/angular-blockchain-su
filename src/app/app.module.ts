@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -37,6 +35,7 @@ import { I18nService } from './services/i18n.service';
 
 import { I18nPipe } from './pipes/i18n.pipe';
 import { SafePipe } from './pipes/safe.pipe';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +45,7 @@ import { SafePipe } from './pipes/safe.pipe';
     AppComponent,
 
     HeaderComponent,
+    FooterComponent,
     AlertComponent,
     UnitPComponent,
     UnitUlComponent,
@@ -69,8 +69,6 @@ import { SafePipe } from './pipes/safe.pipe';
   imports: [
     BrowserModule,
 
-    MatToolbarModule,
-    MatButtonModule,
     MatInputModule,
 
     ReactiveFormsModule,

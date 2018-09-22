@@ -18,6 +18,7 @@ import { AssetComponent } from '../components/management/asset/asset.component';
 import { HistorianRecordComponent } from '../components/composer/historian-record/historian-record.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent},
   { path: 'home', component: HomeComponent},
   { path: 'projects', component: HomeComponent},
   { path: 'about-us', component: AboutUsComponent},

@@ -23,6 +23,14 @@ export class I18nService {
 }
 
 const MESSAGES_RU = {
+  'title': 'Блокчейн сообщества',
+
+  'note': 'Примечание',
+  'details': 'Подробнее',
+
+  'under-construction': 'На текущий момент идет работа над реализацией этой задачи.',
+  'not-implemented-yet': 'На текущий момент данная функциональность не реализована.',
+
   'navigation.home': 'Главная',
   'navigation.projects': 'Проекты',
   'navigation.management': 'Управление',
@@ -239,7 +247,7 @@ const MESSAGES_RU = {
 
   'project.housing-cooperative.proposal.header': 'Общие рассуждения',
   // tslint:disable-next-line:max-line-length
-  'project.housing-cooperative.proposal.p1': 'Необходим альтернативой механизм для приобретения недвижимости. Наличие такого общественного механизма должно послужить стимулом коммерческим банкам уменьшить ставку до уровня 1-2%%. Данный механизм должен быть устойчивым, и работать на протяжении десятилетий.',
+  'project.housing-cooperative.proposal.p1': 'Необходим альтернативой механизм для приобретения недвижимости. Наличие такого общественного механизма должно послужить стимулом коммерческим банкам уменьшить ставку до уровня 1-2%. Данный механизм должен быть устойчивым, и работать на протяжении десятилетий.',
 
   'project.housing-cooperative.goal.header': 'Цель проекта',
   // tslint:disable-next-line:max-line-length
@@ -261,7 +269,7 @@ const MESSAGES_RU = {
 
   'project.housing-cooperative.overpayments.header': 'Ваша переплата',
   // tslint:disable-next-line:max-line-length
-  'project.housing-cooperative.overpayments.i1': 'Банковские переводы 2%%. Возможно мы найдем способы переводов без комиссии, или с меньшей комиссией.',
+  'project.housing-cooperative.overpayments.i1': 'Банковские переводы 2%. Возможно мы найдем способы переводов без комиссии, или с меньшей комиссией.',
   // tslint:disable-next-line:max-line-length
   'project.housing-cooperative.overpayments.i2': 'Оформление документов ~50 000 рублей. Все расходы по оформлению будут на вас. Сотрудник кооператива должен будет приехать и оформить сделку. В начале нашего кооператива это будет поездка в другой город. С ростом нашего сообщества, сотрудники будут появляться в различных городах. Также сюда можно отнести обязательное страхование недвижимости.',
   // tslint:disable-next-line:max-line-length
@@ -281,7 +289,7 @@ const MESSAGES_RU = {
   // tslint:disable-next-line:max-line-length
   'project.housing-cooperative.withdraw-funds.p2': 'Заявки на вывод это тоже очередь, но они имеют наивысший приоритет. При накоплении на кооперативном счете необходимой суммы, такая заявка будет в порядке очереди обработана.',
   // tslint:disable-next-line:max-line-length
-  'project.housing-cooperative.withdraw-funds.p3': 'Если недвижимость вам еще не была приобретена, то ваши потери составят 4%% (два банковских перевода).',
+  'project.housing-cooperative.withdraw-funds.p3': 'Если недвижимость вам еще не была приобретена, то ваши потери составят 4% (два банковских перевода).',
   // tslint:disable-next-line:max-line-length
   'project.housing-cooperative.withdraw-funds.p4': 'Если недвижимость уже была приобретена, то недвижимость продается по рыночной стоимости, из этой суммы погашается долг перед кооперативом, а остальная часть возвращается бывшему участнику. При этом участник может, как заработать, так и потерять, в зависимости от ситуации на рынке жилья.',
 
@@ -297,7 +305,7 @@ const MESSAGES_RU = {
   // tslint:disable-next-line:max-line-length
   'project.housing-cooperative.about-us.p1': 'В основе деятельности нашего кооператива лежит пирамидальный принцип. Жилье приобретается за счет поступления новых членов. Мы исходим из того что пирамида это не обязательно плохо. Все зависит от основателей и насколько их намерения являются мошенническими. Главное чтобы пирамида была устойчивой.',
   // tslint:disable-next-line:max-line-length
-  'project.housing-cooperative.about-us.p2': 'Активами нашего кооператива являются: приобретённая недвижимость, средства на кооперативном счете. Если продать всю недвижимость, то мы получим сумму (за исключением %% при переводе), которую внесли наши участники. В этом случае мы можем разойтись и каждый останется при своих. Мы не сможем возместить только членские взносы, так как эти деньги уже будут потрачены на развитие кооператива.',
+  'project.housing-cooperative.about-us.p2': 'Активами нашего кооператива являются: приобретённая недвижимость, средства на кооперативном счете. Если продать всю недвижимость, то мы получим сумму (за исключением % при переводе), которую внесли наши участники. В этом случае мы можем разойтись и каждый останется при своих. Мы не сможем возместить только членские взносы, так как эти деньги уже будут потрачены на развитие кооператива.',
   // tslint:disable-next-line:max-line-length
   'project.housing-cooperative.about-us.p3': 'Гарантии, которые мы можем вам предложить. Наша бухгалтерская книга будет полностью открыта, для этого мы используем технологию блокчейн. Мы будем принимать переводы с пластиковых карт Visa\MasterCard, которые позволяют оформить процедуру возврата (chargeback), в том случае, если вы посчитаете работу нашего кооператива мошенничеством.',
   // tslint:disable-next-line:max-line-length
@@ -305,10 +313,100 @@ const MESSAGES_RU = {
   // tslint:disable-next-line:max-line-length
   'project.housing-cooperative.about-us.p5': 'Данный проект это очередь, и вам придется ждать момент наступления вашей очереди. Все будет зависеть от количества участников в нашем сообществе.',
 
+  'home.jumbotron.header': 'Блокчейн сообщества - цифровая революция',
+  // tslint:disable-next-line:max-line-length
+  'home.jumbotron.p1': 'Новый мировой порядок под контролем общества. Во имя всех тех, кто жив.., и тех, кого уже нет.., и тех, кто будет потом...',
+
+  'home.motivation.header': 'Мотивация',
+  'home.motivation.p1': 'Построение более справедливого общества, избавление от различного рода эксплуатации (скрытой или явной).',
+
+  'home.principles.header': 'Принципы',
+  // tslint:disable-next-line:max-line-length
+  'home.principles.p1': 'Мы исходим из того, что честным людям скрывать нечего. Технологии, которые мы собираемся использовать, позволяют создать нам максимально открытые и прозрачные системы, в которых все данные будут доступны любому участнику.',
+  'home.principles.p2': 'Мы не собираемся нарушать законодательсво какой либо страны.',
+
+  'home.goal.header': 'Наша цель',
+  // tslint:disable-next-line:max-line-length
+  'home.goal.p1': 'Создание общественных инструментов, которые позволять решать насущные общественные проблемы, а также удалить ненужных посредников.',
+  // tslint:disable-next-line:max-line-length
+  'home.goal.p2': 'Мы предлагаем обществу самому взять на себя управление, так как верим, что общественное управление может работать намного эффективнее государственного.',
+  // tslint:disable-next-line:max-line-length
+  'home.goal.p3': 'К посредникам можно отнести: государство, различные финансовые институты (например, банки). Нашей целью не является борьба с ними.',
+
+  'home.technologies.header': 'Технологии',
+  'home.technologies.blockchain.term': 'Распределенный Журнал, Цепочки Блоков (Distributed Ledger, Blockchain)',
+  // tslint:disable-next-line:max-line-length
+  'home.technologies.blockchain.definition': '- открытая бухгалтерская книга доступная всем пользователям. При этом данные невозможно изменить, либо подделать.',
+  'home.technologies.smart-contracts.term': 'Умные Контракты (Smart Contracts)',
+  // tslint:disable-next-line:max-line-length
+  'home.technologies.smart-contracts.definition': '- компьютерная программа, которая выполняется при определенных условиях. Другими словами это "цифровые законы" по которым "живут" блокчейн сообщества.',
+  'home.technologies.cloud-technologies.term': 'Облачные технологии (Cloud Technologies)',
+  // tslint:disable-next-line:max-line-length
+  'home.technologies.cloud-technologies.definition': '- это удобная среда для хранения и обработки информации, объединяющая в себе аппаратные средства, лицензионное программное обеспечение, каналы связи, а также техническую поддержку.',
+  'home.technologies.decentralized-applications.term': 'Децентрализованные Приложения (Decentralized Applications)',
+  // tslint:disable-next-line:max-line-length
+  'home.technologies.decentralized-applications.definition': '- приложения, в которых отсутствует центральная точка отказа. При выходе из строя, блокировке какого либо узла, приложение должно продолжать работать, а данные должны оставаться доступными.',
+  'home.technologies.open-source.term': 'Открытый исходный код (Open Source)',
+  // tslint:disable-next-line:max-line-length
+  'home.technologies.open-source.definition': '- исходный код будет открыт. Это поможет более быстрому обнаружению и исправлению ошибок. А также может, послужить примером для реализации других блокчейн сообществ.',
+
+  // tslint:disable-next-line:max-line-length
+  'home.technologies.note': 'Облачные технологии и децентрализованные приложения могут противоречить друг другу. Выбор технологий будет зависеть от целей конкретного проекта.',
+
+  'home.management.header': 'Управление',
+  // tslint:disable-next-line:max-line-length
+  'home.management.p1': 'Управление будет реализовано с помощью механизма голосования. Любой участник нашего сообщества может высказать свои идеи. Если за идею проголосуют другие участники, то соответствующие изменения могут быть реализованы как создание нового умного контракта, либо модификация уже существующего.',
+
+  'home.projects.header': 'Проекты',
+  'home.projects.housing-cooperative.header': 'Общественный жилищный кооператив (ипотека 0%)',
+  // tslint:disable-next-line:max-line-length
+  'home.projects.housing-cooperative.description': 'Создание альтернативы банковской ипотеке. Данный общественный механизм должен позволить приобретать объекты недвижимости и избавиться от высоких банковских процентных ставок.',
+  'home.projects.ussr-2.0.header': 'Сообщество советских людей',
+  // tslint:disable-next-line:max-line-length
+  'home.projects.ussr-2.0.description': 'Создание общественного фонда целью, которого будет реализация общественно важных проектов. Например, создание предприятий работающих на благо общества, нацеленных на производство товаров и услуг максимального качества, а не для извлечения максимальной прибыли.',
+  'home.projects.pension-fund.header': 'Общественный пенсионный фонд',
+  // tslint:disable-next-line:max-line-length
+  'home.projects.pension-fund.description': 'Создание прозрачного пенсионного фонда с общественным управлением, невозможностью бесследно украсть средства. Предоставить возможность всем участникам фонда самостоятельно распоряжаться своими средствами.',
+  'home.projects.municipal-services.header': 'Прозрачный ЖЭК',
+  'home.projects.municipal-services.description': 'Построение системы ЖЭК с полностью открытой бухгалтерской книгой.',
+  'home.projects.bank.header': 'Общественный банк',
+  'home.projects.bank.description': 'Создание полноценного банка с общественным управлением и невозможностью бесследно украсть средства.',
+
+  // tslint:disable-next-line:max-line-length
+  'home.projects.note': 'На данный момент идет работа над запуском проекта "Общественный жилищный кооператив". Все остальные проекты перечислены здесь только в виде концепций или идей. Некоторые проекты могут быть связаны. Например: общественный банк может стать банком для всех других проектов, пенсионный фонд может стать инвестором в жилищный кооператив.',
+
+  'home.introduction.header': 'Введение',
+  // tslint:disable-next-line:max-line-length
+  'home.introduction.p1': 'В данном видео перечислены основные наши идеи. Видео было записано на момент зарождения проекта, так что не все будет реализовано точно слово в слово.',
+  // tslint:disable-next-line:max-line-length
+  'home.introduction.p2': 'Мир в эпоху цифровых технологий стремительно меняется. Новые технологии это то, что может сделать наш мир лучше.',
+  // tslint:disable-next-line:max-line-length
+  'home.introduction.p3': 'Несмотря на то, что многие вопросы еще только предстоит решить. Текущее развитие технологий уже позволяет решать огромное количество задач. В том числе и перейти на коллективное (общественное) управление.',
+  // tslint:disable-next-line:max-line-length
+  'home.introduction.p4': 'Одна из наших целей это общество, в котором идет прямое демократическое управление, а не опосредованная представительная демократия.',
+  // tslint:disable-next-line:max-line-length
+  'home.introduction.p5': 'Каждый из участников наших сообществ имеет право на свою точку зрения. Любые идеи могут быть высказаны, а лучшие идеи будут в последующем реализованы.',
+
+  'home.investment.header': 'Инвестиции',
+  // tslint:disable-next-line:max-line-length
+  'home.investment.p1': 'Все описанные проекты не имеют целью получение большой финансовой прибыли, поэтому не можем предложить интересных условий для инвестирования.',
+  // tslint:disable-next-line:max-line-length
+  'home.investment.p2': 'Если вы филантроп или просто богатый человек, которого такая нелепость как инвестиции под минус 4% (два банковских перевода) не пугают, то вы можете воспользоваться формой обратной связи.',
+  // tslint:disable-next-line:max-line-length
+  'home.investment.p3': 'Даже если вы не очень богатый человек, но идеи вам понравились, то вы можете поддержать проект, перечислив любую незначительную для вас сумму денег. Обещаю, что данные деньги не будут бесцельно потрачены, а мы будем стараться сделать наш мир немного лучше.',
+
   '': '',
 };
 
 const MESSAGES_EN = {
+  'title': 'Blockchain community',
+
+  'note': 'Note',
+  'details': 'Details',
+
+  'under-construction': 'This feature is currently in work',
+  'not-implemented-yet': 'This feature is not implemented yet',
+
   'navigation.home': 'Home',
   'navigation.projects': 'Projects',
   'navigation.management': 'Management',
@@ -525,7 +623,7 @@ const MESSAGES_EN = {
 
   'project.housing-cooperative.proposal.header': 'General thoughts',
   // tslint:disable-next-line:max-line-length
-  'project.housing-cooperative.proposal.p1': 'An alternative mechanism for real estate acquisition is needed. The existence of such a public mechanism should serve as a motivation for commercial banks to reduce an effective APR to 1-2 %%. This mechanism should be sustainable, and work for decades.',
+  'project.housing-cooperative.proposal.p1': 'An alternative mechanism for real estate acquisition is needed. The existence of such a public mechanism should serve as a motivation for commercial banks to reduce an effective APR to 1-2 %. This mechanism should be sustainable, and work for decades.',
 
   'project.housing-cooperative.goal.header': 'Project goal',
   // tslint:disable-next-line:max-line-length
@@ -547,7 +645,7 @@ const MESSAGES_EN = {
 
   'project.housing-cooperative.overpayments.header': 'Loan cost',
   // tslint:disable-next-line:max-line-length
-  'project.housing-cooperative.overpayments.i1': 'Bank transfer fee is 2 %%. Perhaps we’ll find a way to transfer without fees, or to reduce it.',
+  'project.housing-cooperative.overpayments.i1': 'Bank transfer fee is 2 %. Perhaps we’ll find a way to transfer without fees, or to reduce it.',
   // tslint:disable-next-line:max-line-length
   'project.housing-cooperative.overpayments.i2': 'Documents fee - about 50 000 rubles. All document fees will be on you. An employee of the cooperative will have to come and settle the deal. In the beginning of our cooperative it might require a trip to another city, with the growth of our community, employees will appear in different cities. Also you can include in costs mandatory real estate insurance.',
   // tslint:disable-next-line:max-line-length
@@ -566,7 +664,7 @@ const MESSAGES_EN = {
   // tslint:disable-next-line:max-line-length
   'project.housing-cooperative.withdraw-funds.p2': 'Withdraw application is also a queue but the difference is they have a higher priority. When cooperative account accumulates necessary amount this application will be processed in the order of the queue.',
   // tslint:disable-next-line:max-line-length
-  'project.housing-cooperative.withdraw-funds.p3': 'If the property has not yet been purchased, then your losses will be 4 %% (two bank transfers).',
+  'project.housing-cooperative.withdraw-funds.p3': 'If the property has not yet been purchased, then your losses will be 4 % (two bank transfers).',
   // tslint:disable-next-line:max-line-length
   'project.housing-cooperative.withdraw-funds.p4': 'If the property had already been acquired, then it will sold at market price, this amount repays the debt to the cooperative, and the rest is returned to the former participant. In this case a participant can earn or lose depending on the housing market situation.',
 
@@ -589,6 +687,83 @@ const MESSAGES_EN = {
   'project.housing-cooperative.about-us.p4': 'At this moment our project does not have an investor and it is unlikely that it will come in. Investments for zero or negative percent are not attractive. Another projects, such as: "Public Pension Fund", "Community of Soviet People" could become investors in our cooperative. But for now the money we have will only be the money of our participants.',
   // tslint:disable-next-line:max-line-length
   'project.housing-cooperative.about-us.p5': 'This project in nature is a queue, and you have to wait for the moment of your turn. Everything will depend on the number of participants in our community.',
+
+  'home.jumbotron.header': 'Blockchain Community - digital revolution',
+  // tslint:disable-next-line:max-line-length
+  'home.jumbotron.p1': 'A new world order under the control of society. In the name of all who live today and those who will .. and those who are no longer with us ...',
+
+  'home.motivation.header': 'Motivation',
+  'home.motivation.p1': 'Building a fair society, stop exploitation of man by man (hidden or explicit).',
+
+  'home.principles.header': 'Principles',
+  // tslint:disable-next-line:max-line-length
+  'home.principles.p1': 'We proceed from the fact that honest people have nothing to hide. The technologies we are going to use allow us to create the most open and transparent systems that will make data available to any participant.',
+  'home.principles.p2': 'We are not going to violate any law of any country.',
+
+  'home.goal.header': 'Our goal',
+  'home.goal.p1': 'To create a public tools that help to solve urgent social problems and remove unnecessary intermediaries.',
+  // tslint:disable-next-line:max-line-length
+  'home.goal.p2': 'We propose to the society to take over the management, as we believe that public administration can work much more efficiently than the state one.',
+  'home.goal.p3': 'The \'mediators\' include: the state and financial institutions (such as banks). Fighting them is not our goal.',
+
+  'home.technologies.header': 'Technology',
+  'home.technologies.blockchain.term': 'Distributed Ledger, Blockchain',
+  'home.technologies.blockchain.definition': '- an open ledger available to all users. Data can not be changed or forged.',
+  'home.technologies.smart-contracts.term': 'Smart Contracts',
+  // tslint:disable-next-line:max-line-length
+  'home.technologies.smart-contracts.definition': '- A program that runs under certain conditions within blockchain. In other words, these are the "digital laws" the blockchain community lives by.',
+  'home.technologies.cloud-technologies.term': 'Cloud Technologies',
+  // tslint:disable-next-line:max-line-length
+  'home.technologies.cloud-technologies.definition': '- it is a convenient environment for information storage and processing, combining hardware software, communication channels and technical support.',
+  'home.technologies.decentralized-applications.term': 'Decentralized Applications',
+  // tslint:disable-next-line:max-line-length
+  'home.technologies.decentralized-applications.definition': '- Applications that do not have a central point of failure. In the event of failure or outage of any node, the application must continue to function properly, and all its data must remain available.',
+  'home.technologies.open-source.term': 'Open Source',
+  // tslint:disable-next-line:max-line-length
+  'home.technologies.open-source.definition': '- The source code will be open. Open source development offers the potential faster error detection and correction and it can also be an example implementation for other blockchain communities.',
+
+  // tslint:disable-next-line:max-line-length
+  'home.technologies.note': 'Cloud technologies and decentralized applications could conflict with each other. The technology choice will depend on the objectives of the specific project.',
+
+  'home.management.header': 'Management',
+  // tslint:disable-next-line:max-line-length
+  'home.management.p1': 'Management will be performed with voting mechanism. Any community member can offer his ideas. In case if other participants vote for the idea, the corresponding changes can be implemented in a form of a new smart contract or modification of an already existing one.',
+
+  'home.projects.header': 'Projects',
+  'home.projects.housing-cooperative.header': 'Public housing cooperative (mortgage 0 %)',
+  // tslint:disable-next-line:max-line-length
+  'home.projects.housing-cooperative.description': 'Making an alternative to a bank mortgage. This public mechanism should allow the acquisition of real estate and get rid of high bank interest rates.',
+  'home.projects.ussr-2.0.header': 'Community of Soviet people',
+  // tslint:disable-next-line:max-line-length
+  'home.projects.ussr-2.0.description': 'Creating a public fund to implement projects making social impact. For example: founding a nonprofit companies producing quality goods and services, working for the benefit of the society.',
+  'home.projects.pension-fund.header': 'Public Pension Fund',
+  // tslint:disable-next-line:max-line-length
+  'home.projects.pension-fund.description': 'A transparent pension fund with public management. Fraud prevention possible thanks to blockchain immutable and distributed nature that does not allow to make transactions without a trace. Every participant is allowed to dispose its own funds independently.',
+  'home.projects.municipal-services.header': 'Transparent Housing Office',
+  'home.projects.municipal-services.description': 'Construction of a housing and utilities system with an open ledger.',
+  'home.projects.bank.header': 'Public Banking',
+  'home.projects.bank.description': 'A bank with public management and inability to steal funds without a trace.',
+
+  // tslint:disable-next-line:max-line-length
+  'home.projects.note': 'At the moment we are working on launch “Public Housing Cooperative". All other projects listed are in conceptual phase or in a form of idea. Some projects may be related, for example a public bank can be a bank for other projects, a pension fund can invest in a housing cooperative.',
+
+  'home.introduction.header': 'Introduction',
+  // tslint:disable-next-line:max-line-length
+  'home.introduction.p1': 'Our main ideas are listed in the following video. The record was made at the time the project was started, so an actual implementation may vary.',
+  'home.introduction.p2': 'In the digital era our world changes rapidly. Digital technologies can make the world a better place.',
+  // tslint:disable-next-line:max-line-length
+  'home.introduction.p3': 'Despite the fact that many issues have yet to be resolved, the current technology level already allows us to solve a big number of problems including switch to collective (public) management.',
+  // tslint:disable-next-line:max-line-length
+  'home.introduction.p4': 'One of our main goals is to build a society with direct democratic governance instead of representative democracy.',
+  // tslint:disable-next-line:max-line-length
+  'home.introduction.p5': 'Every community member has right to their opinion in our community. Any ideas can be expressed, a best ones will be implemented.',
+
+  'home.investment.header': 'Investments',
+  'home.investment.p1': 'All the described projects are not targeted to make a profit, so we can not offer attractive investment options.',
+  // tslint:disable-next-line:max-line-length
+  'home.investment.p2': 'If you are a philanthropist or just a rich man, such a ridiculousness as an investment under minus 4 % (fee for a two bank transfers) is not scary, then you can use the feedback form.',
+  // tslint:disable-next-line:max-line-length
+  'home.investment.p3': 'Even if you are not a rich person but you like the idea - you can support the project by donating any reasonable amount of money. I promise that those funds will not be spent aimlessly, instead we’ll try to make our world a little better.',
 
   '': '',
 };

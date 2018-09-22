@@ -1,25 +1,154 @@
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
+<header class="jumbotron alert-primary shadow-lg">
+  <div class="row">
+    <div class="col-12">
+      <h3>{{"home.jumbotron.header" | i18n}}</h3>
+      <p>{{"home.jumbotron.p1" | i18n}}</p>
+    </div>
+  </div>
+</header>
+<div class="row">
+  <app-unit [base]="'home.motivation'" [parts]="'p1'"></app-unit>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+  <app-unit [base]="'home.principles'" [parts]="'p1,p2'"></app-unit>
+
+  <app-unit [base]="'home.goal'" [parts]="'p1,p2,p3'"></app-unit>
+
+  <div class="col-12">
+    <h5>{{"home.technologies.header" | i18n}}</h5>
+    <p>
+      <span id="blockchain-term" class="font-weight-bold">
+        {{"home.technologies.blockchain.term" | i18n}}
+      </span> {{"home.technologies.blockchain.definition" | i18n}}
+    </p>
+    <p>
+      <span id="smart-contract-term" class="font-weight-bold">{{"home.technologies.smart-contracts.term" | i18n}}
+      </span> {{"home.technologies.smart-contracts.definition" | i18n}}
+    </p>
+    <p>
+      <span id="cloud-technologies-term" class="font-weight-bold">
+        {{"home.technologies.cloud-technologies.term" | i18n}}
+      </span> {{"home.technologies.cloud-technologies.definition" | i18n}}
+    </p>
+    <p>
+      <span id="decentralized-applications-term" class="font-weight-bold">
+        {{"home.technologies.decentralized-applications.term" | i18n}}
+      </span> {{"home.technologies.decentralized-applications.definition | i18n"}}
+    </p>
+    <p>
+      <span id="open-source-term" class="font-weight-bold">
+        {{"home.technologies.open-source.term" | i18n}}
+      </span> {{"home.technologies.open-source.definition" | i18n}}
+    </p>
+    <div class="card">
+      <div class="card-header alert-primary">{{"note" | i18n}}</div>
+      <div class="card-body">
+        <p class="card-text">{{"home.technologies.note" | i18n}}</p>
       </div>
     </div>
   </div>
+
+  <app-unit [base]="'home.management'" [parts]="'p1'"></app-unit>
+
+  <div class="col-12">
+    <h5 id="projects">{{"home.projects.header" | i18n}}</h5>
+  </div>
+
+  <div class="col-lg-4 col-sm-12 mb-3">
+    <div class="card border-primary h-100">
+      <div class="card-body">
+        <h5 class="card-title">
+          <span class="fa fa-file-contract fa-lg"></span> {{"home.projects.housing-cooperative.header" | i18n}}
+        </h5>
+        <p class="card-text">{{"home.projects.housing-cooperative.description" | i18n}}</p>
+      </div>
+      <div class="card-footer">
+        <a href="/project/housing-cooperative.html" class="btn btn-primary">
+          {{"details" | i18n}}...
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-sm-12 mb-3">
+    <div class="card border-primary h-100">
+      <div class="card-body">
+        <h5 class="card-title"><span class="fa fa-dove fa-lg"></span> {{"home.projects.ussr-2.0.header" | i18n}}</h5>
+        <p class="card-text">{{"home.projects.ussr-2.0.description" | i18n}}</p>
+      </div>
+      <div class="card-footer">
+        <a href="/project/ussr-2.0.html" class="btn btn-primary">
+          {{"details" | i18n}}...
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-sm-12 mb-3">
+    <div class="card border-primary h-100">
+      <div class="card-body">
+        <h5 class="card-title"><span class="fa fa-blind fa-lg"></span> {{"home.projects.pension-fund.header" | i18n}}</h5>
+        <p class="card-text">{{"home.projects.pension-fund.description" | i18n}}</p>
+      </div>
+      <div class="card-footer">
+        <a href="/project/pension-fund.html" class="btn btn-primary">
+          {{"details" | i18n}}...
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-sm-12 mb-3">
+    <div class="card border-primary h-100">
+      <div class="card-body">
+        <h5 class="card-title"><span class="fa fa-clipboard-list fa-lg"></span>
+          {{"home.projects.municipal-services.header" | i18n}}</h5>
+        <p class="card-text">{{"home.projects.municipal-services.description" | i18n}}</p>
+      </div>
+      <div class="card-footer">
+        <a href="/project/municipal-services.html" class="btn btn-primary">
+          {{"details" | i18n}}...
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-sm-12 mb-3">
+    <div class="card border-primary h-100">
+      <div class="card-body">
+        <h5 class="card-title"><span class="fa fa-piggy-bank fa-lg"></span> {{"home.projects.bank.header" | i18n}}</h5>
+        <p class="card-text">{{"home.projects.bank.description" | i18n}}</p>
+      </div>
+      <div class="card-footer">
+        <a href="/project/bank.html" class="btn btn-primary">
+          {{"details" | i18n}}...
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header alert-primary">
+        {{"note" | i18n}}
+      </div>
+      <div class="card-body">
+        <p>{{"home.projects.note" | i18n}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 mt-3">
+    <h5>{{"home.introduction.header" | i18n}}</h5>
+    <div class="row">
+      <div class="col-lg-4 col-12">
+        <p>{{"home.introduction.p1" | i18n}}</p>
+        <p>{{"home.introduction.p2" | i18n}}</p>
+        <p>{{"home.introduction.p3" | i18n}}</p>
+        <p>{{"home.introduction.p4" | i18n}}</p>
+        <p>{{"home.introduction.p5" | i18n}}</p>
+      </div>
+      <div class="col-lg-8 col-12">
+        <div class="embed-responsive embed-responsive-4by3">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YaRK8NKHcN4?rel=0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-unit [base]="'home.investment'" [parts]="'p1,p2,p3'"></app-unit>
 </div>

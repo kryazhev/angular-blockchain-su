@@ -35,9 +35,7 @@
                   <li>{{"project.pension-fund.proposal.p1.i1" | i18n}}</li>
                   <li>{{"project.pension-fund.proposal.p1.i2" | i18n}}</li>
                   <li>{{"project.pension-fund.proposal.p1.i3" | i18n}}</li>
-                  <li>{{"project.pension-fund.proposal.p1.i4" | i18n}} 
-                    <span class="badge badge-success">{{"project.pension-fund.proposal.p1.i4.badge" | i18n}}</span>
-                  </li>
+                  <li [innerHtml]='"project.pension-fund.proposal.p1.i4" | i18n | safe'></li>
                 </ul>
                 <p>{{"project.pension-fund.proposal.p2" | i18n}}</p>
               </div>

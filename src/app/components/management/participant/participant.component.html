@@ -9,14 +9,14 @@
         <input formControlName="participantId" type="hidden">
         <div class="modal-body">
           <div class="form-group text-left">
-            <label for="firstName">First Name</label>
-            <input formControlName="firstName" class="form-control" [class.is-invalid]="formErrors.firstName">
-            <div class="invalid-feedback" *ngIf="formErrors.firstName">{{formErrors.firstName}}</div>
+            <label for="firstName">Name</label>
+            <input formControlName="name" class="form-control" [class.is-invalid]="formErrors.name">
+            <div class="invalid-feedback" *ngIf="formErrors.name">{{formErrors.name}}</div>
           </div>
           <div class="form-group text-left">
-            <label for="lastName">Last Name</label>
-            <input formControlName="lastName" class="form-control" [class.is-invalid]="formErrors.lastName">
-            <div class="invalid-feedback" *ngIf="formErrors.lastName">{{formErrors.lastName}}</div>
+            <label for="email">Email</label>
+            <input formControlName="email" class="form-control" [class.is-invalid]="formErrors.email">
+            <div class="invalid-feedback" *ngIf="formErrors.email">{{formErrors.email}}</div>
           </div>
         </div>
 
@@ -42,7 +42,7 @@
           Are you sure you want to delete this participant?
         </div>
         <div class="modal-footer">
-          <button (click)="delete()" type="submit" class="btn btn-danger" data-dismiss="modal">Yes</button>
+          <button (click)="delete()" type="submit" class="btn btn-primary" data-dismiss="modal">Yes</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
         </div>
       </form>
@@ -55,7 +55,7 @@
 </div>
 <div class="row">
   <div class="col-12 col-md-9 text-primary">
-    <h5>SampleParticipant</h5>
+    <h5>Participants</h5>
   </div>
   <div class="col-12 col-md-3 p-1">
     <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
@@ -64,21 +64,21 @@
   </div>
 </div>
 <div class="row p-3 border border-primary bg-primary text-white" *ngIf="items">
-  <div class="col-12 col-md-4 col-lg-5">ParticipantId</div>
-  <div class="col-12 col-md-3 col-lg-3">First Name</div>
-  <div class="col-12 col-md-3 col-lg-3">Last Name</div>
+  <div class="col-12 col-md-4 col-lg-5">Id</div>
+  <div class="col-12 col-md-3 col-lg-3">Name</div>
+  <div class="col-12 col-md-3 col-lg-3">Email</div>
   <div class="col-12 col-md-2 col-lg-1">Actions</div>
 </div>
 <div class="row table-row p-1 border" [class.striped]="index % 2" *ngFor="let item of items; let index = index">
-  <div class="col-12 col-md-4 col-lg-5">{{item.participantId}}</div>
-  <div class="col-12 col-md-3 col-lg-3">{{item.firstName}}</div>
-  <div class="col-12 col-md-3 col-lg-3">{{item.lastName}}</div>
+  <div class="col-12 col-md-4 col-lg-5">{{item.id}}</div>
+  <div class="col-12 col-md-3 col-lg-3">{{item.name}}</div>
+  <div class="col-12 col-md-3 col-lg-3">{{item.email}}</div>
   <div class="col-12 col-md-2 col-lg-1 text-white">
     <div class="btn-group" role="group" aria-label="Actions">
-      <a (click)="editForm(item.participantId);" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal">
+      <a (click)="editForm(item.id);" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal">
         <span class="fas fa-edit"></span>
       </a>
-      <a (click)="setId(item.participantId);" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#deleteModal">
+      <a (click)="setId(item.id);" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#deleteModal">
         <span class="fas fa-trash-alt"></span>
       </a>
     </div>

@@ -51,10 +51,14 @@ export abstract class BaseComponent<Type> implements OnInit {
   save(): void {
     const item = this.form.value;
     item['$class'] = this.getClassName();
+    this.beforeSave(item);
 
     this.dataService.save(item).subscribe(
       () => this.loadAll(),
       error => this.errors = <any>error.message);
+  }
+
+  protected beforeSave(item: Type) {
   }
 
   delete(): void {

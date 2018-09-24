@@ -1,27 +1,37 @@
 import { Asset } from './org.hyperledger.composer.system';
 import { Participant } from './org.hyperledger.composer.system';
 import { Transaction } from './org.hyperledger.composer.system';
-import { Event } from './org.hyperledger.composer.system';
 
-export class SampleParticipant extends Participant {
-    participantId: string;
-    firstName: string;
-    lastName: string;
+export class ManagementParticipant extends Participant {
+    id: string;
+    name: string;
+    email: string;
 }
 
-export class SampleAsset extends Asset {
-    assetId: string;
-    owner: SampleParticipant;
-    value: string;
+export class ManagementProposal extends Asset {
+    id: string;
+    creator: ManagementParticipant;
+
+    header: string;
+    body: string;
+
+    country: string;
+    city: string;
+    district: string;
+
+    approved: number;
+    rejected: number;
+    abstained: number;
 }
 
-export class SampleTransaction extends Transaction {
-    asset: SampleAsset;
-    newValue: string;
+export class ManagementTransaction extends Transaction {
+    creator: ManagementParticipant;
+    asset: ManagementProposal;
+    type: ManagementTransactionType;
 }
 
-export class SampleEvent extends Event {
-    asset: SampleAsset;
-    oldValue: string;
-    newValue: string;
+export enum ManagementTransactionType {
+    APPROVE,
+    REJECT,
+    ABSTAIN,
 }

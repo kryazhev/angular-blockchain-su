@@ -29,7 +29,7 @@ import { UnitUlComponent } from './components/common/units/unit-ul/unit-ul.compo
 import { UnitOlComponent } from './components/common/units/unit-ol/unit-ol.component';
 
 import { ParticipantComponent } from './components/management/participant/participant.component';
-import { AssetComponent } from './components/management/asset/asset.component';
+import { ProposalComponent } from './components/management/proposal/proposal.component';
 import { HistorianRecordComponent } from './components/composer/historian-record/historian-record.component';
 import { I18nService } from './services/i18n.service';
 
@@ -62,7 +62,7 @@ import { FooterComponent } from './components/footer/footer.component';
     BankComponent,
 
     ParticipantComponent,
-    AssetComponent,
+    ProposalComponent,
 
     HistorianRecordComponent,
   ],

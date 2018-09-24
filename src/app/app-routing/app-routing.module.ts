@@ -14,7 +14,7 @@ import { MunicipalServicesComponent } from '../components/projects/municipal-ser
 import { BankComponent } from '../components/projects/bank/bank.component';
 
 import { ParticipantComponent } from '../components/management/participant/participant.component';
-import { AssetComponent } from '../components/management/asset/asset.component';
+import { ProposalComponent } from '../components/management/proposal/proposal.component';
 import { HistorianRecordComponent } from '../components/composer/historian-record/historian-record.component';
 
 const routes: Routes = [
@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'projects/bank', component: BankComponent},
 
   { path: 'projects/management/participants', component: ParticipantComponent},
-  { path: 'projects/management/assets', component: AssetComponent},
+  { path: 'projects/management/assets', component: ProposalComponent},
   { path: 'projects/management/transactions', component: HomeComponent},
 
   { path: 'system/historian-records', component: HistorianRecordComponent},

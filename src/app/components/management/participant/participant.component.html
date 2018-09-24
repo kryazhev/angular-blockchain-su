@@ -6,7 +6,7 @@
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form [formGroup]="form" novalidate class="needs-validation">
-        <input formControlName="participantId" type="hidden">
+        <input formControlName="id" type="hidden">
         <div class="modal-body">
           <div class="form-group text-left">
             <label for="firstName">Name</label>
@@ -74,7 +74,7 @@
   <div class="col-12 col-md-3 col-lg-3">{{item.name}}</div>
   <div class="col-12 col-md-3 col-lg-3">{{item.email}}</div>
   <div class="col-12 col-md-2 col-lg-1 text-white">
-    <div class="btn-group" role="group" aria-label="Actions">
+    <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="10px" role="group" aria-label="Actions">
       <a (click)="editForm(item.id);" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal">
         <span class="fas fa-edit"></span>
       </a>

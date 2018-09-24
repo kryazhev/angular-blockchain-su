@@ -1,13 +1,11 @@
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
         <h4 class="modal-title" id="editModalLabel">Edit Proposal</h4>
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form [formGroup]="form" novalidate class="needs-validation">
-
-        <input formControlName="assetId" type="hidden">
         <div class="modal-body">
           <div class="form-group text-left">
             <label for="owner">Creator</label>
@@ -16,12 +14,12 @@
           </div>
           <div class="form-group text-left">
             <label for="value">Header</label>
-            <input formControlName="header" class="form-control" [class.is-invalid]="formErrors.header">
+            <textarea formControlName="header" class="form-control" [class.is-invalid]="formErrors.header" rows="2"></textarea>
             <div class="invalid-feedback" *ngIf="formErrors.header">{{formErrors.header}}</div>
           </div>
           <div class="form-group text-left">
             <label for="value">Body</label>
-            <input formControlName="body" class="form-control" [class.is-invalid]="formErrors.body">
+            <textarea formControlName="body" class="form-control" [class.is-invalid]="formErrors.body" rows="12"></textarea>
             <div class="invalid-feedback" *ngIf="formErrors.body">{{formErrors.body}}</div>
           </div>
         </div>
@@ -36,55 +34,72 @@
   </div>
 </div>
 
-<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
+<div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" *ngIf="item">
       <div class="modal-header bg-primary text-white">
-        <h4 class="modal-title" id="deleteModalLabel">Delete Proposal</h4>
+        <h4 class="modal-title" id="deleteModalLabel">{{item.header}}</h4>
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form [formGroup]="form">
         <div class="modal-body">
-          Are you sure you want to delete this proposal?
-        </div>
-        <div class="modal-footer">
-          <button (click)="delete()" type="submit" class="btn btn-primary" data-dismiss="modal">Yes</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+          <p>{{item.body}}</p>
+          <div fxLayout="row" fxLayoutAlign="space-around center mt-3" fxLayoutGap="10px">
+            <a (click)="approve(item.id)" class="btn btn-primary text-white">
+              <span class="far fa-smile fa-lg"></span> - <span class="badge badge-light">{{item.approved}}</span>
+            </a>
+            <a (click)="reject(item.id)" class="btn btn-danger text-white">
+              <span class="far fa-frown fa-lg"></span> - <span class="badge badge-light">{{item.rejected}}</span>
+            </a>
+            <a (click)="abstain(item.id)" class="btn btn-secondary text-white">
+              <span class="far fa-meh fa-lg"></span> - <span class="badge badge-light">{{item.abstained}}</span>
+            </a>
+            <span class="flex-spacer"></span>
+            <button type="button" class="btn btn-default" data-dismiss="modal">{{"action.close" | i18n}}</button>
+          </div>
         </div>
       </form>
     </div>
   </div>
 </div>
 
-<div *ngIf="errors" class="alert alert-danger" role="alert">
-  <strong>Error:</strong> {{errors}}
-</div>
 <div class="row">
-  <div class="col-12 col-md-9 text-primary">
-    <h5>Proposals</h5>
+  <div *ngIf="errors" class="col-12 alert alert-danger" role="alert">
+    <strong>Error:</strong> {{errors}}
   </div>
-  <div class="col-12 col-md-3 p-1">
+
+  <div class="col-12 col-sm-9 mt-3 mb-3">
+    <h2>Предложения по управлению сообществами.</h2>
+  </div>
+  <div class="col-12 col-sm-3 mt-3 mb-3">
     <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
-      <span class="fa fa-plus"></span> Create
+      <span class="fa fa-plus"></span> Добавить предложение
     </button>
   </div>
-</div>
-<div class="row p-3 border border-primary bg-primary text-white" *ngIf="items">
-  <div class="col-12 col-md-3 col-lg-3">Header</div>
-  <div class="col-12 col-md-7 col-lg-8">Body</div>
-  <div class="col-12 col-md-2 col-lg-1">Actions</div>
-</div>
-<div class="row table-row p-1 border" [class.striped]="index % 2" *ngFor="let item of items; let index = index">
-  <div class="col-12 col-md-3 col-lg-3">{{item.header}}</div>
-  <div class="col-12 col-md-7 col-lg-8">{{item.body}}</div>
-  <div class="col-12 col-md-2 col-lg-1 text-white">
-    <div class="btn-group" role="group" aria-label="Actions">
-      <a (click)="editForm(item.id);" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal">
-        <span class="fas fa-edit"></span>
-      </a>
-      <a (click)="setId(item.id);" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#deleteModal">
-        <span class="fas fa-trash-alt"></span>
-      </a>
+
+  <div class="col-12 col-md-6" *ngFor="let item of items">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">{{item.header}}</h5>
+        <p class="card-text">{{item.body | truncate : 400}}</p>
+      </div>
+      <div class="card-footer">
+        <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="10px">
+          <a (click)="editForm(item.id);" class="btn btn-primary text-white" data-toggle="modal" data-target="#viewModal">
+            <span class="fa fa-caret-down"></span> {{"details" | i18n}}
+          </a>
+          <span class="flex-spacer"></span>
+          <a (click)="approve(item.id)" class="btn btn-primary text-white">
+            <span class="far fa-smile fa-lg"></span> - <span class="badge badge-light">{{item.approved}}</span>
+          </a>
+          <a (click)="reject(item.id)" class="btn btn-danger text-white">
+            <span class="far fa-frown fa-lg"></span> - <span class="badge badge-light">{{item.rejected}}</span>
+          </a>
+          <a (click)="abstain(item.id)" class="btn btn-secondary text-white">
+            <span class="far fa-meh fa-lg"></span> - <span class="badge badge-light">{{item.abstained}}</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

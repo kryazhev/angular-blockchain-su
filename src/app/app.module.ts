@@ -3,9 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
-import { MatInputModule } from '@angular/material/input';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 import { RestangularModule } from 'ngx-restangular';
 import { RestangularConfigFactory } from 'src/app/services/data.service';
@@ -36,11 +35,13 @@ import { I18nService } from './services/i18n.service';
 import { I18nPipe } from './pipes/i18n.pipe';
 import { SafePipe } from './pipes/safe.pipe';
 import { FooterComponent } from './components/footer/footer.component';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 @NgModule({
   declarations: [
     I18nPipe,
     SafePipe,
+    TruncatePipe,
 
     AppComponent,
 
@@ -69,7 +70,7 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
 
-    MatInputModule,
+    FlexLayoutModule,
 
     ReactiveFormsModule,
     FormsModule,

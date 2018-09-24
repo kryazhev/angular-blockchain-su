@@ -7,6 +7,7 @@ export abstract class BaseComponent<Type> implements OnInit {
 
   form: FormGroup;
 
+  item: Type;
   items: Type[];
   currentId: any;
   errors: string;
@@ -73,7 +74,7 @@ export abstract class BaseComponent<Type> implements OnInit {
 
   editForm(id: any): void {
     this.dataService.one(id).subscribe(
-      result => this.setForm(result),
+      result => { this.item = result; this.setForm(result); },
       error => this.errors = <any>error.message);
   }
 

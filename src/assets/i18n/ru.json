@@ -25,10 +25,14 @@
 
     "action.login": "Войти",
     "action.logout": "Выйти",
+    "action.create": "Создать",
+    "action.add": "Добавить",
     "action.save": "Сохранить",
     "action.send": "Отправить",
     "action.cancel": "Отмена",
     "action.close": "Закрыть",
+    "action.yes": "Да",
+    "action.no": "Нет",
 
     "project.housing-cooperative": "Общественный жилищный кооператив",
     "project.ussr-2.0": "Сообщество советских людей",
@@ -288,11 +292,17 @@
 
     "management.proposals.title": "Предложения по управлению сообществами.",    
     "management.proposals.dialog.title": "Создание предложения",
-    "management.proposals.action.add": "Добавить предложение",
     "management.proposals.field.creator": "Создатель",
     "management.proposals.field.header": "Заголовок",
     "management.proposals.field.body": "Описание",
 
-    "management.participants.title": "Участники."
+    "management.participants.title": "Участники.",
+    "management.participants.edit-dialog.title": "Редактировать участника",
+    "management.participants.delete-dialog.title": "Удалить участника",
+    "management.participants.delete-dialog.body": "Вы уверены что хотите удалить участника?",
+    "management.participants.actions": "Действия",
+    "management.participants.field.id": "Идентификатор",
+    "management.participants.field.name": "Имя",
+    "management.participants.field.email": "Email"
     
 }

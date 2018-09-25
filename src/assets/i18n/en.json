@@ -25,6 +25,8 @@
 
     "action.login": "Login",
     "action.logout": "Log out",
+    "action.create": "Create",
+    "action.add": "Add",
     "action.save": "Save",
     "action.send": "Send",
     "action.cancel": "Cancel",
@@ -290,11 +292,17 @@
 
     "management.proposals.title": "Proposals for community.",
     "management.proposals.dialog.title": "New proposal",
-    "management.proposals.action.add": "Add proposal",
     "management.proposals.field.creator": "Creator",
     "management.proposals.field.header": "Head",
     "management.proposals.field.body": "Body",
 
-    "management.participants.title": "Participants."
+    "management.participants.title": "Participants.",
+    "management.participants.edit-dialog.title": "Edit Participant",
+    "management.participants.delete-dialog.title": "Delete Participant",
+    "management.participants.delete-dialog.body": "Are you sure you want to delete this participant?",
+    "management.participants.actions": "Actions",
+    "management.participants.field.id": "Id",
+    "management.participants.field.name": "Name",
+    "management.participants.field.email": "Email"
 
 }

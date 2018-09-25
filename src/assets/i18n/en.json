@@ -1,6 +1,7 @@
 {
     "title": "Blockchain community",
 
+    "error": "Error",
     "note": "Note",
     "details": "Details",
 
@@ -274,5 +275,15 @@
     "home.investment.header": "Investments",
     "home.investment.p1": "All the described projects are not targeted to make a profit, so we can not offer attractive investment options.",
     "home.investment.p2": "If you are a philanthropist or just a rich man, such a ridiculousness as an investment under minus 4 % (fee for a two bank transfers) is not scary, then you can use the feedback form.",
-    "home.investment.p3": "Even if you are not a rich person but you like the idea - you can support the project by donating any reasonable amount of money. I promise that those funds will not be spent aimlessly, instead we’ll try to make our world a little better."
+    "home.investment.p3": "Even if you are not a rich person but you like the idea - you can support the project by donating any reasonable amount of money. I promise that those funds will not be spent aimlessly, instead we’ll try to make our world a little better.",
+
+    "management.historian-records.title": "Historian Records.",
+    "management.historian-records.dialog.title": "View Historian Record",
+    "management.historian-records.field.id": "Id",
+    "management.historian-records.field.type": "Type",
+    "management.historian-records.field.timestamp": "Timestamp",
+    "management.historian-records.field.invoked": "Invoked",
+    "management.historian-records.field.invoking": "Invoking",
+    "management.historian-records.field.identity": "Identity"
+
 }

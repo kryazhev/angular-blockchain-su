@@ -2,56 +2,56 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
-        <h4 class="modal-title" id="viewModalLabel">View Historian Record</h4>
+        <h4 class="modal-title" id="viewModalLabel">{{"management.historian-records.dialog.title" | i18n}}</h4>
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form [formGroup]="form" novalidate class="needs-validation">
         <div class="modal-body">
           <div class="form-group text-left">
-            <label for="transactionId">Id</label>
+            <label for="transactionId">{{"management.historian-records.field.id" | i18n}}</label>
             <textarea formControlName="transactionId" class="form-control"></textarea>
           </div>
           <div class="form-group text-left">
-            <label for="transactionType">Type</label>
+            <label for="transactionType">{{"management.historian-records.field.type" | i18n}}</label>
             <input formControlName="transactionType" class="form-control">
           </div>
           <div class="form-group text-left">
-            <label for="transactionInvoked">Invoked</label>
+            <label for="transactionInvoked">{{"management.historian-records.field.invoked" | i18n}}</label>
             <textarea formControlName="transactionInvoked" class="form-control"></textarea>
           </div>
           <div class="form-group text-left">
-            <label for="participantInvoking">Invoking</label>
+            <label for="participantInvoking">{{"management.historian-records.field.invoking" | i18n}}</label>
             <textarea formControlName="participantInvoking" class="form-control"></textarea>
           </div>
           <div class="form-group text-left">
-            <label for="identityUsed">Identity</label>
+            <label for="identityUsed">{{"management.historian-records.field.identity" | i18n}}</label>
             <textarea formControlName="identityUsed" class="form-control"></textarea>
           </div>
           <div class="form-group text-left">
-            <label for="transactionTimestamp">Timestamp</label>
+            <label for="transactionTimestamp">{{"management.historian-records.field.timestamp" | i18n}}</label>
             <input formControlName="transactionTimestamp" class="form-control">
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">{{"action.close" | i18n}}</button>
         </div>
       </form>
     </div>
   </div>
 </div>
 
-<div *ngIf="errors" class="alert alert-danger" role="alert">
-  <strong>Error:</strong> {{errors}}
-</div>
 <div class="row">
-  <div class="col-12 text-primary">
-    <h5>HistorianRecords</h5>
+  <div *ngIf="errors" class="col-12 alert alert-danger" role="alert">
+    <strong>{{"errors" | i18n}}:</strong> {{errors}}
+  </div>
+  <div class="col-12 col-sm-9 mt-3 mb-3">
+    <h2>{{"management.historian-records.title" | i18n}}</h2>
   </div>
 </div>
 <div class="row p-3 border border-primary bg-primary text-white" *ngIf="items">
-  <div class="col-12 col-md-5 col-lg-5">Type</div>
-  <div class="col-12 col-md-1 col-lg-1">Timestamp</div>
-  <div class="col-12 col-md-6 col-lg-6">Id</div>
+  <div class="col-12 col-md-5 col-lg-5">{{"management.historian-records.field.type" | i18n}}</div>
+  <div class="col-12 col-md-1 col-lg-1">{{"management.historian-records.field.timestamp" | i18n}}</div>
+  <div class="col-12 col-md-6 col-lg-6">{{"management.historian-records.field.id" | i18n}}</div>
 </div>
 <div class="row table-row p-1 border" [class.striped]="index % 2" *ngFor="let item of items; let index = index">
   <div class="col-12 col-md-5 col-lg-5">{{item.transactionType}}</div>

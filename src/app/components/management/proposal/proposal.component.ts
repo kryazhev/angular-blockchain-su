@@ -2,14 +2,15 @@ import { Component } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 
 import { DataService } from '../../../services/data.service';
-import { ManagementProposal } from '../../../services/su.blockchain';
+import { ManagementProposal, ManagementTransactionType, ManagementTransaction } from '../../../services/su.blockchain';
 import { BaseComponent } from '../../base.component';
+import { Restangular } from 'ngx-restangular';
 
 @Component({
   selector: 'app-proposal',
   templateUrl: './proposal.component.html',
   styleUrls: ['./proposal.component.scss'],
-  providers: [DataService, { provide: 'TypeName', useValue: 'ManagementProposal' }, { provide: 'IdName', useValue: 'id' }],
+  providers: [DataService],
 })
 export class ProposalComponent extends BaseComponent<ManagementProposal> {
 
@@ -36,8 +37,8 @@ export class ProposalComponent extends BaseComponent<ManagementProposal> {
     },
   };
 
-  constructor(dataService: DataService<ManagementProposal>, builder: FormBuilder) {
-    super(dataService, builder);
+  constructor(private restangular: Restangular, builder: FormBuilder) {
+    super(new DataService<ManagementProposal>('ManagementProposal', 'id', restangular), builder);
   }
 
   getClassName(): string {
@@ -94,6 +95,31 @@ export class ProposalComponent extends BaseComponent<ManagementProposal> {
     item.approved = 0;
     item.rejected = 0;
     item.abstained = 0;
+  }
+
+  approve(id: string) {
+    this.vote(id, 'APPROVE');
+  }
+
+  reject(id: string) {
+    this.vote(id, 'REJECT');
+  }
+
+  abstain(id: string) {
+    this.vote(id, 'ABSTAIN');
+  }
+
+  private vote(id: string, type: string) {
+    const tx = {
+      $class: 'su.ManagementTransaction',
+      creator: 'resource:su.ManagementParticipant#1',
+      asset: 'resource:su.ManagementProposal#' + id,
+      type: type
+    };
+
+    this.restangular.all('ManagementTransaction').post(tx).subscribe(
+      () => this.loadAll(),
+      error => this.errors = <any>error.message);
   }
 
 }

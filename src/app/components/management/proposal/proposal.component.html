@@ -45,15 +45,6 @@
         <div class="modal-body">
           <p>{{item.body}}</p>
           <div fxLayout="row" fxLayoutAlign="space-around center mt-3" fxLayoutGap="5px">
-            <a (click)="approve(item.id)" class="btn btn-primary text-white">
-              <span class="far fa-smile"></span>&nbsp;<span class="badge badge-light">{{item.approved}}</span>
-            </a>
-            <a (click)="reject(item.id)" class="btn btn-danger text-white">
-              <span class="far fa-frown"></span>&nbsp;<span class="badge badge-light">{{item.rejected}}</span>
-            </a>
-            <a (click)="abstain(item.id)" class="btn btn-secondary text-white">
-              <span class="far fa-meh"></span>&nbsp;<span class="badge badge-light">{{item.abstained}}</span>
-            </a>
             <span class="flex-spacer"></span>
             <button type="button" class="btn btn-default" data-dismiss="modal">{{"action.close" | i18n}}</button>
           </div>

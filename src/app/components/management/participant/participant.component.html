@@ -22,8 +22,8 @@
 
         <div class="modal-footer">
           <button (click)="save()" type="submit" class="btn btn-primary" [disabled]="form.invalid" [class.disabled]="form.invalid"
-            data-dismiss="modal">Save</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            data-dismiss="modal">{{"action.save" | i18n}}</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">{{"action.close" | i18n}}</button>
         </div>
       </form>
     </div>
@@ -42,24 +42,24 @@
           Are you sure you want to delete this participant?
         </div>
         <div class="modal-footer">
-          <button (click)="delete()" type="submit" class="btn btn-primary" data-dismiss="modal">Yes</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+          <button (click)="delete()" type="submit" class="btn btn-primary" data-dismiss="modal">{{"action.yes" | i18n}}</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">{{"action.no" | i18n}}</button>
         </div>
       </form>
     </div>
   </div>
 </div>
 
-<div *ngIf="errors" class="alert alert-danger" role="alert">
-  <strong>Error:</strong> {{errors}}
-</div>
 <div class="row">
-  <div class="col-12 col-md-9 text-primary">
-    <h5>Participants</h5>
+  <div *ngIf="errors" class="col-12 alert alert-danger" role="alert">
+    <strong>{{"error" | i18n}}:</strong> {{errors}}
+  </div>
+  <div class="col-12 col-sm-9 mt-3 mb-3">
+    <h2>{{"management.participants.title" | i18n}}</h2>
   </div>
   <div class="col-12 col-md-3 p-1">
     <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
-      <span class="fa fa-plus"></span> Create
+      <span class="fa fa-plus"></span> {{"action.create" | i18n}}
     </button>
   </div>
 </div>

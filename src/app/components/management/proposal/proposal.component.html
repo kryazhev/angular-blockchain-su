@@ -2,23 +2,23 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header bg-primary text-white">
-        <h4 class="modal-title" id="editModalLabel">Edit Proposal</h4>
+        <h4 class="modal-title" id="editModalLabel">{{"management.proposals.dialog.title" | i18n}}</h4>
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
       <form [formGroup]="form" novalidate class="needs-validation">
         <div class="modal-body">
           <div class="form-group text-left">
-            <label for="owner">Creator</label>
+            <label for="owner">{{"management.proposals.field.creator" | i18n}}</label>
             <input formControlName="creator" class="form-control" [class.is-invalid]="formErrors.creator">
             <div class="invalid-feedback" *ngIf="formErrors.creator">{{formErrors.creator}}</div>
           </div>
           <div class="form-group text-left">
-            <label for="value">Header</label>
+            <label for="value">{{"management.proposals.field.header" | i18n}}</label>
             <textarea formControlName="header" class="form-control" [class.is-invalid]="formErrors.header" rows="2"></textarea>
             <div class="invalid-feedback" *ngIf="formErrors.header">{{formErrors.header}}</div>
           </div>
           <div class="form-group text-left">
-            <label for="value">Body</label>
+            <label for="value">{{"management.proposals.field.body" | i18n}}</label>
             <textarea formControlName="body" class="form-control" [class.is-invalid]="formErrors.body" rows="12"></textarea>
             <div class="invalid-feedback" *ngIf="formErrors.body">{{formErrors.body}}</div>
           </div>
@@ -26,8 +26,8 @@
 
         <div class="modal-footer">
           <button (click)="save()" type="submit" class="btn btn-primary" [disabled]="form.invalid" [class.disabled]="form.invalid"
-            data-dismiss="modal">Save</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            data-dismiss="modal">{{"action.save" | i18n}}</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">{{"action.close" | i18n}}</button>
         </div>
       </form>
     </div>
@@ -65,15 +65,14 @@
 
 <div class="row">
   <div *ngIf="errors" class="col-12 alert alert-danger" role="alert">
-    <strong>Error:</strong> {{errors}}
+    <strong>{{"error" | i18n}}:</strong> {{errors}}
   </div>
-
   <div class="col-12 col-sm-9 mt-3 mb-3">
-    <h2>Предложения по управлению сообществами.</h2>
+    <h2>{{"management.proposals.title" | i18n}}</h2>
   </div>
   <div class="col-12 col-sm-3 mt-3 mb-3">
     <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
-      <span class="fa fa-plus"></span> Добавить предложение
+      <span class="fa fa-plus"></span> {{"management.proposals.action.add" | i18n}}
     </button>
   </div>
 

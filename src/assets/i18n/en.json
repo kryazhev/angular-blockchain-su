@@ -29,6 +29,8 @@
     "action.send": "Send",
     "action.cancel": "Cancel",
     "action.close": "Close",
+    "action.yes": "Yes",
+    "action.no": "No",
 
     "project.housing-cooperative": "Public Housing Cooperative",
     "project.ussr-2.0": "Community of Soviet People",
@@ -284,6 +286,15 @@
     "management.historian-records.field.timestamp": "Timestamp",
     "management.historian-records.field.invoked": "Invoked",
     "management.historian-records.field.invoking": "Invoking",
-    "management.historian-records.field.identity": "Identity"
+    "management.historian-records.field.identity": "Identity",
+
+    "management.proposals.title": "Proposals for community.",
+    "management.proposals.dialog.title": "New proposal",
+    "management.proposals.action.add": "Add proposal",
+    "management.proposals.field.creator": "Creator",
+    "management.proposals.field.header": "Head",
+    "management.proposals.field.body": "Body",
+
+    "management.participants.title": "Participants."
 
 }

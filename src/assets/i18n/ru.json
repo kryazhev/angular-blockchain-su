@@ -284,6 +284,15 @@
     "management.historian-records.field.timestamp": "Время",
     "management.historian-records.field.invoked": "Вызывающий",
     "management.historian-records.field.invoking": "Вызов",
-    "management.historian-records.field.identity": "Личность"
+    "management.historian-records.field.identity": "Личность",
 
+    "management.proposals.title": "Предложения по управлению сообществами.",    
+    "management.proposals.dialog.title": "Создание предложения",
+    "management.proposals.action.add": "Добавить предложение",
+    "management.proposals.field.creator": "Создатель",
+    "management.proposals.field.header": "Заголовок",
+    "management.proposals.field.body": "Описание",
+
+    "management.participants.title": "Участники."
+    
 }

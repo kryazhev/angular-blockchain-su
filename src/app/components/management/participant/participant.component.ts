@@ -3,13 +3,12 @@ import { DataService } from '../../../services/data.service';
 import { BaseComponent } from '../../base.component';
 import { ManagementParticipant } from '../../../services/su.blockchain';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Restangular } from 'ngx-restangular';
 
 @Component({
   selector: 'app-participant',
   templateUrl: './participant.component.html',
   styleUrls: ['./participant.component.scss'],
-  providers: [DataService],
+  providers: [DataService, { provide: 'TypeName', useValue: 'ManagementParticipant' }, { provide: 'IdName', useValue: 'id' }],
 })
 export class ParticipantComponent extends BaseComponent<ManagementParticipant> {
 
@@ -32,8 +31,8 @@ export class ParticipantComponent extends BaseComponent<ManagementParticipant> {
     },
   };
 
-  constructor(private restangular: Restangular, builder: FormBuilder) {
-    super(new DataService<ManagementParticipant>('ManagementParticipant', 'id', restangular), builder);
+  constructor(dataService: DataService<ManagementParticipant>, builder: FormBuilder) {
+    super(dataService, builder);
   }
 
   getClassName(): string {

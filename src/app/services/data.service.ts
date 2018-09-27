@@ -9,7 +9,7 @@ import { v4 as uuid } from 'uuid';
 })
 export class DataService<Type> {
 
-  constructor(private typeName: string, private idName: string, private restangular: Restangular) { }
+  constructor(@Inject('TypeName') private typeName: string, @Inject('IdName') private idName: string, private restangular: Restangular) { }
 
   list(): Observable<Type[]> {
     console.log('List ' + this.typeName);

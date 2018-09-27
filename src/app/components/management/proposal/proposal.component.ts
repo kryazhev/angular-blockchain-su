@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 
 import { DataService } from '../../../services/data.service';
-import { ManagementProposal, ManagementTransactionType, ManagementTransaction } from '../../../services/su.blockchain';
+import { ManagementProposal} from '../../../services/su.blockchain';
 import { BaseComponent } from '../../base.component';
 import { Restangular } from 'ngx-restangular';
 
@@ -10,7 +10,7 @@ import { Restangular } from 'ngx-restangular';
   selector: 'app-proposal',
   templateUrl: './proposal.component.html',
   styleUrls: ['./proposal.component.scss'],
-  providers: [DataService],
+  providers: [DataService, { provide: 'TypeName', useValue: 'ManagementProposal' }, { provide: 'IdName', useValue: 'id' }],
 })
 export class ProposalComponent extends BaseComponent<ManagementProposal> {
 
@@ -37,8 +37,8 @@ export class ProposalComponent extends BaseComponent<ManagementProposal> {
     },
   };
 
-  constructor(private restangular: Restangular, builder: FormBuilder) {
-    super(new DataService<ManagementProposal>('ManagementProposal', 'id', restangular), builder);
+  constructor(dataService: DataService<ManagementProposal>, builder: FormBuilder, private restangular: Restangular) {
+    super(dataService, builder);
   }
 
   getClassName(): string {

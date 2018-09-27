@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { BaseComponent } from '../../base.component';
 import { HistorianRecord } from '../../../services/org.hyperledger.composer.system';
 import { FormBuilder } from '@angular/forms';
-import { Restangular } from 'ngx-restangular';
 
 @Component({
   selector: 'app-historian-record',
   templateUrl: './historian-record.component.html',
   styleUrls: ['./historian-record.component.scss'],
-  providers: [DataService],
+  providers: [DataService, { provide: 'TypeName', useValue: 'system/historian' }, { provide: 'IdName', useValue: 'transactionId' }],
 })
 export class HistorianRecordComponent extends BaseComponent<HistorianRecord> {
 
@@ -17,8 +16,8 @@ export class HistorianRecordComponent extends BaseComponent<HistorianRecord> {
 
   validationMessages = {};
 
-  constructor(private restangular: Restangular, builder: FormBuilder) {
-    super(new DataService<HistorianRecord>('system/historian', 'transactionId', restangular), builder);
+  constructor(dataService: DataService<HistorianRecord>, builder: FormBuilder) {
+    super(dataService, builder);
   }
 
   getClassName(): string {
